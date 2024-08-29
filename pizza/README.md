@@ -8,4 +8,6 @@ Here's a quick start for any project.
 * Paste the folder somewhere suitable.
 * Rename the folder to something usefull.
 
-That's it!
+## ./pizza
+
+Introduction to htMl, a web page for an imaginary pizzeria.
