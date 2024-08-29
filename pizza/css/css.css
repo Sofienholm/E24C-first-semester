@@ -1,0 +1,30 @@
+/**
+ * file: css/css.css
+ * purpose: styling
+ **/
+
+/* Define variables in the :root */
+ :root {
+   --contrast: lime;
+   --backgr: #000;
+ }
+
+/* baggrund */
+body {
+  background-color: #d3c2e0
+}
+
+/* Use your variables on elements */
+img {
+  width: 250px;
+  height: auto;
+}
+
+h3 {
+  color: red;
+}
+
+p {
+  color: chocolate;
+}
+
