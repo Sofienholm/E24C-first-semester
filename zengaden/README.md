@@ -25,6 +25,7 @@ Ifølge bogen [21st Century Skills](https://ipaper.ipapercms.dk/ErhvervsakademiA
 ## Litteraturliste
 
 Robbins, Jennifer: "Learning Web Design" (2022)
-Robbins, Jennifer: [Materials for Learning Web Design](https://learningwebdesign.com/5e/materials/LWD5e_materials.zip)
+
+Robbins, Jennifer (2022): ["Materials for Learning Web Design"](https://learningwebdesign.com/5e/materials/LWD5e_materials.zip)
 
 Mette Risgaard Olsen og Susanne Østergaard Olsen: "21st Century Skills" (Erhvervsakademi Aarhus, 2022)
