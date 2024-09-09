@@ -1,0 +1,89 @@
+/**
+ * file: css/css.css
+ * purpose: styling
+ **/
+
+/* Google font(s) */
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+/**
+ * Fonten bruges sådan:
+
+  font-family: "Kaushan Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+
+*/
+
+/* Define variables in the :root */
+ :root {
+  /* Farvepalet: Italiens farver til pizzeria */
+   --lux: #ffffff;
+   --tenebrae: #000000;
+   --groen: green;
+   --roed: #ff0000;
+
+   /* Fonte: websafe og en fra Google fonts */
+   --sansSerif: Tahoma;
+   --displayType: "Kaushan Script", cursive;
+
+   /* Til design "test" */
+   --kant: 2px solid var(var(--roed));
+ }
+
+ /* Fonte */
+ body {
+  font-family: var(--sansSerif);
+  color: var(--tenebrae);
+ }
+
+ /* Display font til websitets titel */
+ h1 {
+  font-family: var(--displayType);
+ }
+
+ /* Farver */
+ header,
+ footer {
+  background-color: var(--groen);
+  color: var(--lux);
+ }
+
+/* Viser elementers størrelse */
+header, 
+footer, 
+main, 
+nav,
+aside,
+article {
+  border: 1px solid var(--roed);
+}
+
+header,
+footer,
+nav {
+  text-align: center;
+}
+
+ /* Layout (Robbins p. 419 ff.) */
+main {
+  /* display: flex; */
+}
+
+/* Billeder det responsive trick */
+.resp {
+  max-width: 100%;
+  /* eller width: 100% til "hero image" */
+}
+
+/* responsiv (sigt efter tre breakpoints) */
+
+/*
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: var(--roed);
+    color: var(--lux);
+  }
+}
+*/
+ 
