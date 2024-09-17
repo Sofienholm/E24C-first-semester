@@ -1,11 +1,20 @@
-# Boilerplate: HTML5, CSS and JavaScript
+# Upload til server
 
-Here's a quick start for any project.
+Sådan:
 
-## Usage
+* Stå i "roden" af mapperne, dér hvor index.html bør være.
+* Marker alle filer, fx COMMAND + A.
+* Højreklik på det markerede.
+* Vælg "komprimer".
 
-* Copy the folder named `boilerplate` in your Filemagager
-* Paste the folder somewhere suitable.
-* Rename the folder to something usefull.
+Resultatet er en zip-fil.
 
-That's it!
+Fra kontrolpanelet på Simply.dk eller andet webhotel uploades og upakkes zippen i mappen. 
+
+Husk, at markere, at serveren skal prøve at udpakke zippen efter upload ;-)
+
+## FAQ: Billeder vises ikke ...
+
+* Tjek, at stien til billedet er korrekt stavet med små og store bogstaver.
+* Der må ikke være mellemrum i filnavne.
+* Husk "../" foran filnavnet, hvis dit CSS ligger i en undermappe. 
