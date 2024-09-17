@@ -18,3 +18,4 @@ Husk, at markere, at serveren skal prøve at udpakke zippen efter upload ;-)
 * Tjek, at stien til billedet er korrekt stavet med små og store bogstaver.
 * Der må ikke være mellemrum i filnavne.
 * Husk "../" foran filnavnet, hvis dit CSS ligger i en undermappe. 
+
