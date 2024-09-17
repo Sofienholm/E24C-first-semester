@@ -1,0 +1,22 @@
+/**
+ * file: css/css.css
+ * purpose: styling
+ **/
+
+/* Define variables in the :root */
+ :root {
+   --contrast: lime;
+   --backgr: #000;
+   --hvid: #fff;
+ }
+
+/* Use your variables on elements */
+body {
+  background-color: var(--backgr);
+  color: var(--contrast);
+  text-align: center;
+}
+
+img {
+  max-width: 250px;
+}
