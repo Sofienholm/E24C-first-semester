@@ -10,7 +10,8 @@
  }
 
 /* Use your variables on elements */
- main {
+/**
+main {
    color: var(--contrast);
    background-color: var(--backgr);
  }
@@ -19,3 +20,4 @@
  body {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
  }
+**/
