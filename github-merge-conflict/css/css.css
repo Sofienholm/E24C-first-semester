@@ -10,7 +10,9 @@
  }
 
 /* Use your variables on elements */
- main {
+/**
+main {
    color: var(--contrast);
    background-color: var(--backgr);
  }
+**/
