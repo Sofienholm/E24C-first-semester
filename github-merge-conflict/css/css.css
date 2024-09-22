@@ -10,14 +10,13 @@
  }
 
 /* Use your variables on elements */
-/**
+/*
 main {
    color: var(--contrast);
    background-color: var(--backgr);
  }
-
+*/
  /** merge conflict efter disse tilføjelser **/
  body {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
  }
-**/
