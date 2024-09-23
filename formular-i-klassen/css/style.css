@@ -1,0 +1,66 @@
+/* style.css */
+body {
+    background-color: chocolate;
+    color: #fff;
+}
+
+/*
+#valg {
+ padding: 25px;
+ background-color: chartreuse;
+ width: 33%;
+ margin: auto;
+}
+*/
+
+.luft {
+    margin-top: 12px;
+    padding: 12px;
+}
+
+label,
+input {
+    color: rgb(45, 43, 38);
+}
+
+.ikon {
+  font-size: 3rem;
+  color: royalblue;
+}
+
+/* Responsiv */
+
+/* A) fuld bredde */
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+footer article {
+    border: 6px solid rgb(235, 227, 232);
+    width: 45%;
+}
+
+/* B) Små skærme (mobil) */
+@media only screen and (max-width: 600px) {
+
+    body {
+        background-color: deeppink;
+    }
+
+    main {
+        background-color: aqua;
+    }
+
+    footer {
+        display: block;
+    }
+
+    footer article {
+        width: 100%;
+        margin-top: 45px;
+        font-size: 4rem;
+    }
+}
+
+
