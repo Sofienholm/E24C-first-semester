@@ -2,7 +2,7 @@
 
 Here's a quick start for any project.
 
-Napoleon
+
 
 ## Usage
 
@@ -15,7 +15,7 @@ That's it!
 ## Her kommer "merge" konflikten
 
 ~~~~~
-<a href="#">  adifaiofao f </a>
+<a href="#">  Link text here </a>
 ~~~~~
 
 [tekst](https://multimusen.dk)
