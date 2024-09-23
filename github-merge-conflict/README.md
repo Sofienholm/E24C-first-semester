@@ -9,5 +9,3 @@ Here's a quick start for any project.
 * Rename the folder to something usefull.
 
 That's it!
-
-.... HMMM HVA SKER DER ...
