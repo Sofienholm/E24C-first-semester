@@ -2,6 +2,8 @@
 
 Here's a quick start for any project.
 
+Napoleon
+
 ## Usage
 
 * Copy the folder named `boilerplate` in your Filemagager
@@ -9,3 +11,11 @@ Here's a quick start for any project.
 * Rename the folder to something usefull.
 
 That's it!
+
+~~~~~
+<a href="#">  adifaiofao f </a>
+~~~~~
+
+[tekst](https://multimusen.dk)
+
+## Etc.
