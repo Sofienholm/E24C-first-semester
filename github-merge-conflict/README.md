@@ -9,3 +9,5 @@ Here's a quick start for any project.
 * Rename the folder to something usefull.
 
 That's it!
+
+NU KOMMER DER EN KONFLIKT
