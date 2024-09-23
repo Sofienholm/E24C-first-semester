@@ -12,6 +12,8 @@ Napoleon
 
 That's it!
 
+## Her kommer "merge" konflikten
+
 ~~~~~
 <a href="#">  adifaiofao f </a>
 ~~~~~
