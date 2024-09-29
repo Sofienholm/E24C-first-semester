@@ -1,11 +1,13 @@
-# Boilerplate: HTML5, CSS and JavaScript
+# Øvelse: Responsiv Top Navigation
 
-Here's a quick start for any project.
+Denne øvelse bygger på [dette eksempel](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) fra W3 Schools. 
 
-## Usage
+* Kopier HTML til index.html
+* Kopier CSS til den eksterne css-fil.
+* Kopier JavaScriptet til den eksterne JavaScript-fil
 
-* Copy the folder named `boilerplate` in your Filemagager
-* Paste the folder somewhere suitable.
-* Rename the folder to something usefull.
+Så er du i gang - og nu kan du begynde at style din topnavigation.
 
-That's it!
+Opret et antal undersider, og link til dem.
+
+Prøv også at lave intern navigation, hvor man linker til et anker (anchor) på siden. Så kan du også lave en onepager.
