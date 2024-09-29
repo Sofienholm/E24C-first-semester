@@ -14,4 +14,6 @@ Prøv også at lave intern navigation, hvor man linker til et anker (anchor) på
 
 ## Ide til Løsning
 
+* Github branches giver mulighed for at variere koden
+
 Denne gren giver en ide om, hvordan koden fra W3 kan implementeres.
