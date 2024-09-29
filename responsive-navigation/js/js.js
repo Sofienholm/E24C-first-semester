@@ -9,7 +9,7 @@ console.log('Success: JavaScript running!')
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction() {
 
-    console.log('myFunction() er aktiveret nu. \n\n');
+    console.log('Der klikkes på burgeren nu. \n\n');
 
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
