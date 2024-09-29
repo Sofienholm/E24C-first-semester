@@ -3,14 +3,12 @@
  * purpose: styling
  **/
 
-/* Define variables in the :root */
- :root {
-   --contrast: lime;
-   --backgr: #000;
- }
+/* Husk, at du kan gemme farver og fonte som variabler */
 
-/* Use your variables on elements */
- main {
-   color: var(--contrast);
-   background-color: var(--backgr);
- }
+/*
+:root {
+
+}
+*/
+
+/* CSS'en fra W3 Schools placeres her */
