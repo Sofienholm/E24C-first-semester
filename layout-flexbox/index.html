@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>SKRIV-TITEL-HER</title>
+  <title>Responsive Layoutprincipper</title>
   <link rel="stylesheet" href="css/css.css">
 </head>
 <body>
   <header>
-    <h1>Vibys Bedste Pizza</h1>
+    <h1>Responsive Layoutprincipper</h1>
   </header>
 
-  <!-- øvelse II: styling af menu -->
+  <!-- Menuen -->
   <nav>
     <a href="#">Forsiden</a>
     <a href="#">Om Os</a>
@@ -20,25 +20,65 @@
     <a href="#">Kontakt</a>
   </nav>
 
-  <!-- øvelse I: styling af main -->
   <main>
-    <aside>
-      <img src="https://placehold.co/600x400" alt="Placeholder" class="resp">
-    </aside>
-    <article>
-      <h2>Lorem Ipsum</h2>
-      <p>Lorem Ipsum sit dolor impect. Lorem Ipsum sit dolor impect. Lorem Ipsum sit dolor impect. Lorem Ipsum sit dolor impect. Lorem Ipsum sit dolor impect. </p>
-    </article>
-    <article>
-      <h2>Lorem Ipsum</h2>
-      <p>Lorem Ipsum sit dolor impect. Lorem Ipsum sit dolor impect. Lorem Ipsum sit dolor impect. Lorem Ipsum sit dolor impect. Lorem Ipsum sit dolor impect. </p>
-    </article>
+    <!-- Kolonner -->
+    <section class="kolonner">
+      <aside>
+        <img class="hundrede" src="images/78eceae4-d41e-49d3-9147-d3101f5012c0.jpeg" alt="">
+        <h2>Asiden</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti sed impedit non consequatur hic vel voluptate error architecto maiores, quisquam porro fugit assumenda cum corporis ea. Magni maiores cum recusandae?</p>
+      </aside>
+      <article>
+        <img class="hundrede" src="images/8c2df8a4-0f76-4a92-94f8-5f26d7591227.jpeg" alt="">
+        <h2>Lorem Ipsum</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates praesentium accusamus fugiat consectetur aliquam maiores, inventore dignissimos ea expedita quo repudiandae quisquam voluptate veritatis vero perspiciatis repellendus rem, odio laborum.</p>
+      </article>
+      <article>
+        <img  class="hundrede" src="images/c19969a3-fcfd-49a6-91cd-c887a73bf73a.jpeg" alt="">
+        <h2>Lorem Ipsum</h2>
+        <p>Lorem Ipsum sit dolor impect. Lorem Ipsum sit dolor impect. Lorem Ipsum sit dolor impect. Lorem Ipsum sit dolor impect. Lorem Ipsum sit dolor impect. </p>
+      </article>
+      </section>
+
+      <section>
+        <h2>Responsivt Galleri med Flexbox</h2>
+        <ul>
+          <li>display: flex</li>
+          <li>flex-wrap: wrap</li>
+          <li>justify-content: space-evenly</li>
+        </ul>
+      </section>
+
+      <!-- eksempel: et responsivt galleri med flex -->
+      <section id="mitGalleri" class="kolonner">
+
+        <img src="images/78eceae4-d41e-49d3-9147-d3101f5012c0.jpeg" alt="" class="galleri">
+        <img src="images/8c2df8a4-0f76-4a92-94f8-5f26d7591227.jpeg" alt="" class="galleri">
+        <img src="images/c19969a3-fcfd-49a6-91cd-c887a73bf73a.jpeg" alt="" class="galleri">
+        <img src="images/f9abab77-61e2-4675-8696-f1fa8bbfb2ba.jpeg" alt="" class="galleri">
+
+        <img src="images/78eceae4-d41e-49d3-9147-d3101f5012c0.jpeg" alt="" class="galleri">
+        <img src="images/8c2df8a4-0f76-4a92-94f8-5f26d7591227.jpeg" alt="" class="galleri">
+        <img src="images/c19969a3-fcfd-49a6-91cd-c887a73bf73a.jpeg" alt="" class="galleri">
+        <img src="images/f9abab77-61e2-4675-8696-f1fa8bbfb2ba.jpeg" alt="" class="galleri">
+
+        <img src="images/78eceae4-d41e-49d3-9147-d3101f5012c0.jpeg" alt="" class="galleri">
+        <img src="images/8c2df8a4-0f76-4a92-94f8-5f26d7591227.jpeg" alt="" class="galleri">
+        <img src="images/c19969a3-fcfd-49a6-91cd-c887a73bf73a.jpeg" alt="" class="galleri">
+        <img src="images/f9abab77-61e2-4675-8696-f1fa8bbfb2ba.jpeg" alt="" class="galleri">
+
+        <img src="images/78eceae4-d41e-49d3-9147-d3101f5012c0.jpeg" alt="" class="galleri">
+        <img src="images/8c2df8a4-0f76-4a92-94f8-5f26d7591227.jpeg" alt="" class="galleri">
+        <img src="images/c19969a3-fcfd-49a6-91cd-c887a73bf73a.jpeg" alt="" class="galleri">
+        <img src="images/f9abab77-61e2-4675-8696-f1fa8bbfb2ba.jpeg" alt="" class="galleri">
+       
+      </section>
+
   </main>
 
   <footer>
-    Bedste Pizza <br>
-    Viby Ringvej 104 <br>
-    tlf. 1234 5678 <br>
+    <p>Design med Flexbox</p>
+    <p>&copy; Per Thyjær Jensen</p>
   </footer>
 
   <script src="js/js.js"></script>

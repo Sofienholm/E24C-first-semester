@@ -31,6 +31,36 @@
    --kant: 2px solid var(var(--roed));
  }
 
+/* Tricks med billeder */
+
+/* Responsive billeder */
+.hundrede {
+  width: 100%;
+  height: auto;
+}
+
+/* Billeder: galleri */ 
+.galleri {
+  width: 418px;
+  height: auto;
+}
+
+/* Kolonner vila flex */
+.kolonner {
+  display:flex;
+}
+
+/* Galleriet flexes */
+#mitGalleri {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  
+  gap: 10px;
+  gap: 10px 20px; /* row-gap column gap */
+  row-gap: 10px;
+  column-gap: 20px;
+}
+
  /* Fonte */
  body {
   font-family: var(--sansSerif);
@@ -38,7 +68,9 @@
  }
 
  /* Display font til websitets titel */
- h1 {
+ h1, 
+ h2, 
+ h3 {
   font-family: var(--displayType);
  }
 
@@ -65,25 +97,21 @@ nav {
   text-align: center;
 }
 
- /* Layout (Robbins p. 419 ff.) */
-main {
-  /* display: flex; */
-}
-
-/* Billeder det responsive trick */
-.resp {
-  max-width: 100%;
-  /* eller width: 100% til "hero image" */
-}
 
 /* responsiv (sigt efter tre breakpoints) */
 
-/*
+/* Mobile enheder */
 @media only screen and (max-width: 600px) {
+  
+  /* Responsiv effekt: viser tydeligt, at det virker ... */
   body {
-    background-color: var(--roed);
+    background-color: var(--tenebrae);
     color: var(--lux);
   }
+
+  /* Responsive kolonner */
+  .kolonner {
+    display: block;
+  }
 }
-*/
  
