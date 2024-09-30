@@ -11,6 +11,23 @@
 }
 */
 
+/* Lidt design lissom */
+body {
+  background-image: url("https://www.publicdomainpictures.net/pictures/30000/velka/red-apples.jpg");
+}
+
+h1 {
+  color: #fff;
+  background-color: #04AA6D;
+  text-align: center;
+  padding: 1.234rem;
+}
+
+#myTopnav {
+  display: flex;
+  justify-content: space-around;
+}
+
 /* CSS'en fra W3 Schools placeres her */
 /* Add a black background color to the top navigation */
 .topnav {
