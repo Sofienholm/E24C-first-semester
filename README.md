@@ -17,4 +17,8 @@ Du får også *kendskab* til lidt **JavaScript**; men emnet foldes ikke ud før 
 
 Den vigtigste mappe i dette repository er *boilerplate*. Koden i denne mappe er skrevet for at kunne genbruges. Brug en kopi af mappen hver gang du laver en ny opgave, projekt eller eksperiment.
 
+## Nye kodelinjer kommer her
+
+Ok, her kommer noget nyt indhold. Og sådan noget.
+
 / Per Thykjær Jensen
