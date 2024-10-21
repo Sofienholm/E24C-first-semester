@@ -393,3 +393,9 @@ For hver test noteres eventuelle udfordringer, som bør rettes.
  ### Fem testpersoner er dækkende
  
  Husk, at Nielsen Norman Group anbefaler at fem testpersoner er tilstrækkeligt: https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/
+
+ ### Browserspecifikke problemer
+
+ Af og til kan du rende ind i problemer med at browsere ikke læser CSS ens. Denne artikel er en god introduktion til emnet:
+
+ https://medium.com/@lelianto.eko/how-to-solve-cross-browser-compatibility-issues-with-css-73a4f5083b9e 
