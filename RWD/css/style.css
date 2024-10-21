@@ -1,5 +1,14 @@
 /* Mobile regler */
 
+/*
+
+* store fonte
+* store knapper
+* gerne knapper der er 100% i bredde 
+* links skal være store - <a>
+
+*/
+
 /* CSS reset */
 * {
     margin: 0;
@@ -55,7 +64,11 @@ img {
 
 
 /* Tablets (min. bredde: 600px) */
+
+
+
 @media (min-width: 600px) {
+/* ... her kan fonte og knapper være lidt mindre ... */
     main {
         flex-direction: row;
         justify-content: space-between;
