@@ -7,6 +7,7 @@
 /** sprøger rengøringsassistenten: er der rent? */
 function rent( tjek ){
     if (tjek === true){
+        /** HTML "injektion" */
         instruks.innerHTML = `
         <h2>Udmærket, du fortsætter bare ...</h2>
         <div class="whitespace"></div>
@@ -14,10 +15,12 @@ function rent( tjek ){
         <div class="whitespace"></div>
         <button  onclick="naesteRum()">OK</button>`
     
+        /** Vise/skjule */
         erDetRent.style.visibility = "hidden";
         instruks.style.visibility = "visible";
     }
     else {
+        /** HTML "injektion" */
         instruks.innerHTML = `
             <h2>Der skal altså gøres rent i værelset</h2>
             <div class="whitespace"></div>
@@ -29,11 +32,10 @@ function rent( tjek ){
                 <li>Gør badeværelset rent</li>
             </ol>
             <div class="whitespace"></div>
-            <button id="ja" onclick="naesteRum()">Klik her når der er rent.</button>        
+            <button id="ja" onclick="rent(true)">Klik her når der er rent.</button>        
         `
         
-        
-        
+        /** Vise/skjule */
         erDetRent.style.visibility = "hidden";
         instruks.style.visibility = "visible";
     }
@@ -41,7 +43,8 @@ function rent( tjek ){
 
 /** rengøringsassistenten går til det næste rum */
 function naesteRum(){
-    console.log("naesterum ......")
+
+    /** Vise/skjule */
     erDetRent.style.visibility = "visible";
     instruks.style.visibility = "hidden";
 }

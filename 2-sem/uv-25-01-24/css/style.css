@@ -25,6 +25,9 @@ li {
 
     /* whitespace */
     --whsp: 3vh;
+
+    /* fonte */
+    --fantasy: fantasy;
 }
 
 .whitespace {
@@ -52,7 +55,6 @@ section {
 }
 
 footer, header {
-
     text-align: center;
     background-color: var(--brun);
     padding: 33px 0px;
@@ -62,6 +64,10 @@ footer {
     position: absolute;
     bottom: 0px;
     width: 100%;
+}
+
+h1 {
+    font-family: var(--fantasy);
 }
 
 a {
