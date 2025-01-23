@@ -43,4 +43,8 @@ Ok, her kommer noget nyt indhold. Og sådan noget.
 
 Se Murat Kilic [Responsive Navbar](https://github.com/muratkilic1978/build-responsive-navbar-with-dropdown-completed)
 
+## Log med ændringer
+
+20250123: CSS forbedret i Boilerplate.
+
 / Per Thykjær Jensen

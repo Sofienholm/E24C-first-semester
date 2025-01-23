@@ -3,14 +3,25 @@
  * purpose: styling
  **/
 
-/* Define variables in the :root */
- :root {
-   --contrast: lime;
-   --backgr: #000;
- }
+/* Remove whitespace on top of certain browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Use your variables on elements */
+/* Define variables in the :root */
+ 
+
+/* Use your variables on elements along these lines */
 /*
+:root {
+  --contrast: lime;
+  --backgr: #000;
+}
+
+--- You can use the variables like this ---
+
  main {
    color: var(--contrast);
    background-color: var(--backgr);
