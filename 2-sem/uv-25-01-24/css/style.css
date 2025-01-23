@@ -6,13 +6,6 @@
     vertical-align: baseline;
 }
 
-h1,
-p,
-li {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-
 :root {
     /** farver */
     --hvid: #fcf4f2;
@@ -40,6 +33,7 @@ body {
     font-family: fantasy;
 }
 
+/* Layout */
 main {
     display: flex;
     justify-content: center;
@@ -66,8 +60,17 @@ footer {
     width: 100%;
 }
 
-h1 {
+/* overskrifter */
+h1,
+h2,
+h3 {
     font-family: var(--fantasy);
+}
+
+/* brødtekster, &c. */
+p,
+li {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 a {
@@ -86,7 +89,6 @@ ol {
     margin-left: var(--whsp);
 }
 
-/* diverse */
-.citat {
+blockquote {
     color: var(--groen);
 }
