@@ -15,7 +15,7 @@ function rent( tjek ){
         <div class="whitespace"></div>
         <button  onclick="naesteRum()">OK</button>`
     
-        /** Vise/skjule */
+        /** CSS: Vise/skjule */
         erDetRent.style.visibility = "hidden"
         instruks.style.visibility = "visible"
     }
@@ -35,7 +35,7 @@ function rent( tjek ){
             <button id="ja" onclick="rent(true)">Klik her når der er rent.</button>        
         `
         
-        /** Vise/skjule */
+        /** CSS: Vise/skjule */
         erDetRent.style.visibility = "hidden"
         instruks.style.visibility = "visible"
     }
@@ -43,8 +43,7 @@ function rent( tjek ){
 
 /** rengøringsassistenten går til det næste rum */
 function naesteRum(){
-
-    /** Vise/skjule */
+    /** CSS: Vise/skjule */
     erDetRent.style.visibility = "visible"
     instruks.style.visibility = "hidden"
 }
