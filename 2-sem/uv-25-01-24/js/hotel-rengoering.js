@@ -16,8 +16,8 @@ function rent( tjek ){
         <button  onclick="naesteRum()">OK</button>`
     
         /** Vise/skjule */
-        erDetRent.style.visibility = "hidden";
-        instruks.style.visibility = "visible";
+        erDetRent.style.visibility = "hidden"
+        instruks.style.visibility = "visible"
     }
     else {
         /** HTML "injektion" */
@@ -36,8 +36,8 @@ function rent( tjek ){
         `
         
         /** Vise/skjule */
-        erDetRent.style.visibility = "hidden";
-        instruks.style.visibility = "visible";
+        erDetRent.style.visibility = "hidden"
+        instruks.style.visibility = "visible"
     }
 }
 
@@ -45,6 +45,6 @@ function rent( tjek ){
 function naesteRum(){
 
     /** Vise/skjule */
-    erDetRent.style.visibility = "visible";
-    instruks.style.visibility = "hidden";
+    erDetRent.style.visibility = "visible"
+    instruks.style.visibility = "hidden"
 }
