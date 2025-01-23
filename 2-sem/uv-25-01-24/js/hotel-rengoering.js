@@ -1,6 +1,7 @@
 /**
  * Fil: hotel-rengoering.js
  * Formål: din personlige digitale servicemedarbejderassistent.
+ * Næste version: serviceassistenten skal kunne klikke ok, når der fx er støvsuget
  */
 
 /** sprøger rengøringsassistenten: er der rent? */
@@ -8,8 +9,9 @@ function rent( tjek ){
     if (tjek === true){
         instruks.innerHTML = `
         <h2>Udmærket, du fortsætter bare ...</h2>
-        <label>Gå til næste rum</label>
-        <br>
+        <div class="whitespace"></div>
+        <label>Gå til næste rum!</label>
+        <div class="whitespace"></div>
         <button  onclick="naesteRum()">OK</button>`
     
         erDetRent.style.visibility = "hidden";
@@ -17,7 +19,8 @@ function rent( tjek ){
     }
     else {
         instruks.innerHTML = `
-            <h2>Der skal altså gøres rent her</h2>
+            <h2>Der skal altså gøres rent i værelset</h2>
+            <div class="whitespace"></div>
             <p>Gør rummet rent nu!</p>
             <div class="whitespace"></div>
             <ol>

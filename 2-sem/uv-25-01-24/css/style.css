@@ -79,3 +79,8 @@ button {
 ol {
     margin-left: var(--whsp);
 }
+
+/* diverse */
+.citat {
+    color: var(--groen);
+}
