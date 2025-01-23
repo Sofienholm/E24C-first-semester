@@ -4,7 +4,7 @@
  * Næste version: serviceassistenten skal kunne klikke ok, når der fx er støvsuget
  */
 
-/** sprøger rengøringsassistenten: er der rent? */
+/** spørger rengøringsassistenten: er der rent? */
 function rent( tjek ){
     if (tjek === true){
         /** HTML "injektion" */
