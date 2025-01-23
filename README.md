@@ -2,12 +2,13 @@
 
 ## Andet semester
 
-På 2. semester skal vi arbejde med JavaScript. Der er fokus på:
+På 2. semester skal vi arbejde med JavaScript. Der er fokus på, fx:
 
 * Event-baseret kode
 * Kodeforståelse
 * Objekter
 * JSON
+* Anvendelse af loops
 
 Kodeforståelse er det vigtigste i undervisningen. Når du ser dine JavaScript, så er det ikke godt nok, hvis koden bare "virker" som noget uforståeligt gryf skabt af en mere kunstig "intelligens". 
 
