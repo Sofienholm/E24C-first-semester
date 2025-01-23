@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huler og Drager: Monsterliste</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>Monsterliste</h1>
+            <h2>Spilmesterens hemmelige bog</h2>
+        </header>
+
+        <main>
+            <!-- her kan spilmesteren hente monstre og lignende -->
+            <section>
+                <h2>Hent et monster</h2>
+                <button onclick="hentMonster()">Hent et tilfældigt monster</button>
+            </section>
+
+            <!-- her er de monstre du bruger -->
+            <section>
+                <h2>Lige pludselig ser du</h2>
+                <article id="visMonstrene">
+                </article>
+            </section>
+
+            <!-- samlige monstre -->
+            <section>
+                <h2>Samtlige monstre</h2>
+                <ol id="monsterListe"></ol>
+            </section>
+        </main>
+
+        <footer>
+            &copy; Per Thykjær Jensen - licens: <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">  GPLv3 </a>.
+        </footer>
+
+    </div> <!-- /#wrap -->
+
+    <!-- scriptet herunder udfører alle kommandoer -->
+     <script src="js/js.js"></script>
+</body>
+</html>

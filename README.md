@@ -1,8 +1,25 @@
-# E24C Første Semester
+# E24C - kode til første og andet semester
 
-## Velkommen
+## Andet semester
 
-Velkommen til programmering på første semester af Multimediedesigneruddannelsen. I dette Github Repository finder du kode fra undervisningen, og eksempler fra mine tutorials.
+På 2. semester skal vi arbejde med JavaScript. Der er fokus på:
+
+* Event-baseret kode
+* Kodeforståelse
+* Objekter
+* JSON
+
+Kodeforståelse er det vigtigste i undervisningen. Når du ser dine JavaScript, så er det ikke godt nok, hvis koden bare "virker" som noget uforståeligt gryf skabt af en mere kunstig "intelligens". 
+
+Du skal selv kunne skrive kode - og du skal selv forstå den kode, som du præsenterer. 
+
+Undtagelsen er, når vi bruger et library, dvs. noget kode som andre har stillet til rådighed. Her behøver du ikke at forstå koden; men til gengæld skal du angive dine libraries i bibliografien. 
+
+Hvis du bruger parallax med biblioteket Rellax kan det se sådan ud i kildefortegnelsen:
+
+Rellax (parallax bibliotek) @url https://dixonandmoe.com/rellax/
+
+I koden skal du kunne gøre rede for, hvordan fx Rellax er brugt.
 
 ## Programmering
 

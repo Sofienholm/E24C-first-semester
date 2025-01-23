@@ -1,0 +1,58 @@
+:root {
+    /* tekst */
+    --baggrund: #f4efd3;
+    --tekst: #000;
+
+    /* font */ 
+    --font: Tahoma, Verdana, sans-serif;
+
+    /* whitespace */
+    --wspc: 8px;
+}
+
+/* generelt */
+* {
+    border-top: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: var(--baggrund);
+    color: var(--tekst);
+    font-family: var(--font);
+}
+
+h1,
+p {
+    margin: var(--wspc);
+    text-align: center;
+}
+
+/* Styling af spillepladen */
+#resultat {
+    display: flex;
+    max-width: 90%;
+    justify-content: center;
+}
+
+#resultat div {
+    border: 4px solid var(--tekst);
+    margin: var(--wspc);
+    padding: var(--wspc)
+}
+
+/* skjul ved klik */
+/* se @uri: https://css-tricks.com/the-checkbox-hack/ */
+.control-me {
+    /* Default state */
+    display: block;
+  }
+  #toggle:checked ~ .control-me {
+    /* A toggled state! No JavaScript! */
+    display: none;
+  }
+
+.visually-hidden {
+    display: none;
+}
+

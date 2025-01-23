@@ -1,0 +1,58 @@
+/* Første animation */
+
+img {
+    height: 255px;
+    width: auto;
+}
+
+#farver {
+    position: relative;
+    width: 333px;
+    height: 333px;  
+    animation-name: farveSkift; /* vælg et andet navn til animationerne end example ;-) */
+    animation-duration: 14s; /* se de mange animations-muligheder: start, stop, loop, etc. */
+}
+
+/* The animation code */
+@keyframes farveSkift {
+    from {
+        /* background-color: red; */
+        left: 0px;
+        top: 777px;
+    }
+    to {
+        /* background-color: yellow; */
+        left: 777px;
+        top: 0px;
+    }
+  }
+
+  /* Grækaranimationen */
+  #graskar img {
+    position: relative;
+    width: 222px;
+    height: auto;
+    animation-name: flytGraeskar; /* vælg et andet navn til animationerne end example ;-) */
+    animation-duration: 10s; /* se de mange animations-muligheder: start, stop, loop, etc. */
+
+  }
+
+  /* @keyframes via procenter */
+
+  @keyframes flytGraeskar {
+    0%   {
+        background-color: red;
+        top: -333px;
+    } /* du kan selv sætte flere eller fætte "trin" på her */
+    25%  {
+        background-color: yellow;
+        top: 400px;
+    }
+    50%  {
+        background-color: blue;
+        top: 500px;
+        }
+    100% {
+        background-color: green;}
+        999px;
+  }

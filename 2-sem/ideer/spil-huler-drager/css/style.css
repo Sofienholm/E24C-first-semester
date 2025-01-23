@@ -1,0 +1,36 @@
+:root {
+    --hvid: #fff;
+    --sort: #000;
+    --groen: #0f0;
+    --link: rgb(185, 185, 255);
+    --whsp: 16px;
+}
+
+body {
+    background-color: var(--sort);
+    color: var(--groen);
+    font-family: fantasy;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    min-height: 67vh;
+}
+
+section {
+    border: 1px dotted var(--groen);
+    width: 33%;
+    padding: var(--whsp);
+}
+
+footer, header {
+    margin-top: var(--whsp);
+    text-align: center;
+}
+
+a {
+    color: var(--link);
+}

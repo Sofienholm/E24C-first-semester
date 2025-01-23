@@ -1,0 +1,21 @@
+'use strict';
+
+/* test */
+console.log("JavaScriptet er aktivt.");
+
+/* skriv */
+document.getElementById("resultat");
+
+/* vis tallene fra 1 .. 9 */
+for (let i = 0; i < 9; i++){
+    console.log(i + 1);
+
+    /* skriv tallet i DOM'en */
+    resultat.innerHTML += `   
+        <input type="checkbox" id="toggle" class="visually-hidden">   
+        <div class="talKort control-me">   
+            <label for="toggle">Toggle</label>
+            <h2>  ${i + 1}  </h2>
+        </div>
+    `;
+}
