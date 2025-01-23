@@ -23,10 +23,6 @@
     --fantasy: fantasy;
 }
 
-.whitespace {
-    height: var(--whsp);
-}
-
 body {
     background-color: var(--sort);
     color: var(--hvid);
@@ -58,6 +54,11 @@ footer {
     position: absolute;
     bottom: 0px;
     width: 100%;
+}
+
+/* afstandstykke */
+.whitespace {
+    height: var(--whsp);
 }
 
 /* overskrifter */
