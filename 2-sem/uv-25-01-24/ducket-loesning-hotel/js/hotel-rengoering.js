@@ -55,12 +55,12 @@ function xxx(){
     instruks.innerHTML = `
         <article>
             <h2> Nu har vi tilføjet et "step" </h2>
-            <p>Step 19: I hvilken vor helt møder en drage ...</p>
+            <p>Step 19: I hvilket vor ankommer til en dør ...</p>
 
             <div class="whitespace"></div>
-            <button onclick="alert('... og så videre ...')"> Næste </button>
-            <button onclick="alert('... og så videre ...')"> Næste </button>
-            <button onclick="alert('... og så videre ...')"> Næste </button>
+            <button onclick="alert('Du ser en fe')"> Gå til højre </button>
+            <button onclick="alert('Du ser en lindorm')"> Gå til venstre </button>
+            <button onclick="alert('Pludselig kommer en heks flyvende')"> Åbn døren foran dig </button>
         </article>
     
     `
