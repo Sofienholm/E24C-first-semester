@@ -32,7 +32,8 @@ function rent( tjek ){
                 <li>Gør badeværelset rent</li>
             </ol>
             <div class="whitespace"></div>
-            <button id="ja" onclick="rent(true)">Klik her når der er rent.</button>        
+            <button id="ja" onclick="rent(true)">Klik her når der er rent.</button>
+            <button id="hmm" onclick="xxx()">Næste "step".</button>        
         `
         
         /** CSS: Vise/skjule */
@@ -46,4 +47,21 @@ function naesteRum(){
     /** CSS: Vise/skjule */
     erDetRent.style.visibility = "visible"
     instruks.style.visibility = "hidden"
+}
+
+function xxx(){
+    //alert("ok, jeg virker lissom ...")
+
+    instruks.innerHTML = `
+        <article>
+            <h2> Nu har vi tilføjet et "step" </h2>
+            <p>Step 19: I hvilken vor helt møder en drage ...</p>
+
+            <div class="whitespace"></div>
+            <button onclick="alert('... og så videre ...')"> Næste </button>
+            <button onclick="alert('... og så videre ...')"> Næste </button>
+            <button onclick="alert('... og så videre ...')"> Næste </button>
+        </article>
+    
+    `
 }
