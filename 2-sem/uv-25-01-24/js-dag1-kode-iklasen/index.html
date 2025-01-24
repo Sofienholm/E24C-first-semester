@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScriptets Byggeklodser</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <header>
+        <h1>JavaScriptets Byggeklodser</h1>
+    </header>
+    <main id="baggrund">
+        <article id="resultat">Hej verden</article>
+        <article id="seVarer">
+            <h2>Hvad har onkel Anders i køleskabet?</h2>
+        </article>
+        <article>
+            <legend>Vælg en farve til baggrund</legend>
+
+            <!-- knapper som kalder en funktion -->
+            <button onclick="farver( 'pink', 'green' )">Rød</button>
+            <button onclick="farver( '#f9fc41', 'red' )">Nettogul</button>
+        </article>
+    </main>
+
+    <footer>&copy; Jensen, 2024</footer>
+    
+    <!-- Js placeres som det sidste før /body -->
+    <script src="js/js.js"></script>
+</body>
+</html>
