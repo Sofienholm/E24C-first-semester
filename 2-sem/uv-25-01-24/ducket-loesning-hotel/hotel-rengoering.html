@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rengøring på hotelværelser</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Rengøringsassistentens digitale assistent</h1>
+        <div class="whitespace"></div>
+        <p>Hej med dig, <br> 
+            Jeg er din personlige digitale servicemedarbejderassistent.</p>
+        <div class="whitespace"></div>
+    </header>
+    
+    <main>
+        <!-- spørgsmål -->
+        <section id="erDetRent">
+            <h2>Du går ind på værelset</h2>
+            <label>Er dette værelse rent?</label><br>
+
+            <div class="whitespace"></div>
+
+            <button id="ja" onclick="rent(true)">Ja</button>
+            <button id="nej" onclick="rent(false)">Nej</button>
+        </section>
+
+        <!--- instrukser -->
+        <section id="instruks">
+            <blockquote>
+                <h2>Pedersens lov</h2>
+                <p>- Det som kan skinne, skal skinne!</p>
+            </blockquote>
+        </section>
+    </main>
+
+    <footer>
+        &copy; Per Thykjær Jensen, 2023
+    </footer>
+
+    <!-- placer altid scriptet til sidst således at alle elementer er indlæst i browseren -->
+    <script src="js/hotel-rengoering.js"></script>
+    
+</body>
+</html>
