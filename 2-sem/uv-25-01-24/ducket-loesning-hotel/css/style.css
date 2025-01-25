@@ -93,3 +93,9 @@ ol {
 blockquote {
     color: var(--groen);
 }
+
+img {
+    height: 180px;
+    width: auto;
+    border-radius: 50%;
+}

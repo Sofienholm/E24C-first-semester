@@ -52,16 +52,21 @@ function naesteRum(){
 function xxx(){
     //alert("ok, jeg virker lissom ...")
 
+    // styler element i markup (her med CSS var)
+    document.body.style.backgroundColor = "var(--oliven)"
+
     instruks.innerHTML = `
         <article>
             <h2> Nu har vi tilføjet et "step" </h2>
-            <p>Step 19: I hvilket vor ankommer til en dør ...</p>
+            <p>Step 19:<br> I hvilket vor helt standser op foran et slot ...</p>
+            <p>Her falder vi lidt ud af rengørings-metaforen; men denne type kode egner sig fortrinligt til storytelling. Så her er lidt stemning a la rollespil, som "Huler og Drager".</p>
 
             <div class="whitespace"></div>
-            <button onclick="alert('Du ser en fe')"> Gå til højre </button>
+            <button onclick="alert('En valkyrie flyver forbi')"> Gå til højre </button>
             <button onclick="alert('Du ser en lindorm')"> Gå til venstre </button>
-            <button onclick="alert('Pludselig kommer en heks flyvende')"> Åbn døren foran dig </button>
+            <button onclick="alert('En heks flaksr forbi på sin kost')"> Åbn døren foran dig </button>
         </article>
-    
     `
+    erDetRent.style.visibility = "visible"
+    erDetRent.innerHTML = "<img src='billeder/heks.webp'>"
 }
