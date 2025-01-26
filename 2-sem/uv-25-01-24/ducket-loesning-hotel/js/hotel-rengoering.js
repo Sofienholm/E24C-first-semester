@@ -53,8 +53,9 @@ function xxx(){
     //alert("ok, jeg virker lissom ...")
 
     // styler element i markup (her med CSS var)
-    document.body.style.backgroundColor = "var(--oliven)"
-
+    document.body.style.backgroundColor = "var(--tegl)"
+    
+    
     instruks.innerHTML = `
         <article>
             <h2> Nu har vi tilføjet et "step" </h2>
