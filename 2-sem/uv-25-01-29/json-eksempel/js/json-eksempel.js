@@ -1,6 +1,6 @@
 getText("js/sushi.json"); // kalder funktionen og senter filnavnet som parameter
 
-// funktionen defineres
+// funktionen kan hente en tekstfil som en tekst-streng.
 async function getText(file) {
 
     let x = await fetch(file); // filen hentes
