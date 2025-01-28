@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "navn": "California Rulle",
+        "type": "Uramaki",
+        "indhold": "Ris, laks, avocado",
+        "pris": 24
+    },
+    {
+        "id": 2,
+        "navn": "Avocado Dream",
+        "type": "Inari",
+        "indhold": "Ris, avocado, ærter",
+        "pris": 19
+    }
+]
