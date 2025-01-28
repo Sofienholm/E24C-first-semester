@@ -7,12 +7,13 @@ async function getText(file) {
     let y = await x.text(); // viser indholdet af filen som tekststeng
     console.log(y) // viser tekststrengen y
     
-    // Vi konverterer strengen til et JSON objekt
-    let Sushierne = JSON.parse( y )
+    let Sushierne = JSON.parse( y ) // Vi konverterer strengen y til et JSON objekt
     console.log( Sushierne ) // læg mærke til objektet og dets egenskaber
 
     // Til sidst kan vi loope indholdet ud
     Sushierne.forEach(vis => {
+
+        // ${vis.EGENSKAB} - sådan kan du hente objektets egenskaber 
         resultat.innerHTML += `
             <article class="menuListe">
                 <h3> ${vis.id}: ${vis.navn} </h3>
@@ -20,7 +21,3 @@ async function getText(file) {
         `
     });
 }
-
-/** Læg mærke til metoden med ${vis.navn}
- *  Sådan kan du hente JSON-objektets egenskaber
- */
