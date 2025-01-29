@@ -1,8 +1,17 @@
 body {
     background-color: mediumaquamarine;
-    font-size: 2rem;
     text-align: center;
 }
 img {
     border-radius: 50%;
+    width: 333px;
+    height: auto;
+}
+#resultat {
+    display: flex;
+    justify-content: space-around;
+}
+article {
+    margin: 8px;
+    border: 1px solid rgb(47, 4, 28);
 }
