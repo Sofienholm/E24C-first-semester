@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json demo</title>
+</head>
+<body>
+    <h1>JSON demo</h1>
+    <div id="resultat"></div>
+
+    <script>
+        getText("data/sushierne.json")
+
+        async function getText( file ) {
+
+            // henter data-filen
+            let x = await fetch( file )
+            let y = await x.text() // laves til en streng
+            console.log( y )
+            
+            // forvandler tekststrengen til et JSON objekt
+            let sushierne = JSON.parse( y )
+            console.log( sushierne )
+
+            // skriv til DOM
+            // resultat.innerHTML += sushierne[0].navn
+
+            for (let i = 0; i < sushierne.length; i++){
+                resultat.innerHTML += "<section class='liste'><h2>" + sushierne[i].navn + "</h2></section>"
+            }
+            
+        }
+    </script>
+    
+</body>
+</html>

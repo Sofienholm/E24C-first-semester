@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "navn": "California",
+        "ingredienser": "ris, laks, etc.",
+        "type": "hosomaki",
+        "pris": 23
+    },
+    {
+        "id": 2,
+        "navn": "Avocado",
+        "ingredienser": "avocado, ris",
+        "type": "futomaki",
+        "pris": 45
+    },
+    {
+        "id": 3,
+        "navn": "Tun",
+        "ingredienser": "tun, ris",
+        "type": "nigiri",
+        "pris": 56
+    },
+    {
+        "id": 4,
+        "navn": "Laks",
+        "ingredienser": "laks, ris",
+        "type": "sashimi",
+        "pris": 12
+    }
+]
