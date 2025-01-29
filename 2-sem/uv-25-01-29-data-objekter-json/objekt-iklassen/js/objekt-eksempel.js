@@ -17,7 +17,10 @@ let person2 = {
   forNavn: "Anne",
   efterNavn: "Pedersen",
   fra: "Vendsyssel",
-  billede: "anne.jpeg"
+  billede: "anne.jpeg",
+  hilsen: function(){
+    alert(this.forNavn + " siger hej med dig.")
+  }
 }
 
 // skriv til DOM
@@ -25,8 +28,10 @@ resultat.innerHTML = `
     <article>
     <h2> Navn: ${person2.forNavn} ${person2.efterNavn} </h2>
     <figure>
-        <img src="billeder/${person2.billede}" alt="Foto: ${person2.forNavn} ${person2.efterNavn}">
+        <!-- event bygges ind i billedet -->
+        <img onclick="person2.hilsen()" src="billeder/${person2.billede}" alt="Foto: ${person2.forNavn} ${person2.efterNavn}">
         <figcaption> Foto: ${person2.forNavn} ${person2.efterNavn} </figcaption>
     </figure>
     </article>
 `
+//person2.hilsen()
