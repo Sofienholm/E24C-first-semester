@@ -5,7 +5,7 @@
 
 Her er en ide til, hvordan løsningen kan se ud med den interaktive video. Jeg har pga. filstørrelser ikke vedlagt videoen, du skal altså selv tilføje din egen video.
 
-* [Video Object Properties](https://www.w3schools.com/jsref/dom_obj_video.asp)
+* Se her: [Video Object Properties](https://www.w3schools.com/jsref/dom_obj_video.asp)
 
 # Audio
 ## Ide til løsning
