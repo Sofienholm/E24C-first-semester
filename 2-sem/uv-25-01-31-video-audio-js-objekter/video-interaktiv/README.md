@@ -12,4 +12,4 @@ Her er en ide til, hvordan løsningen kan se ud med den interaktive video. Jeg h
 
 Audio-scripts ligner i høj grad video. 
 
-* Se her: [Audio Object Properties](https://www.w3schools.com/jsref/dom_obj_audio.asp)
+* Se her: [Audio Object Properties](https://www.w3schools.com/jsref/dom_obj_audio.asp) 
