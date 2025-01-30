@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interaktiv video</title>
+    <link rel="stylesheet" href="css/video-interaktiv.css">
 </head>
 <body>
     <header>
@@ -14,28 +15,28 @@
     </header>
     <main>
 
-    <video id="minVideo" width="600" controls>
-        <h2>Interaktiv video</h2>
-        <source 
-            src="assets/video/os_simplyUpload.mp4" 
-            type="video/mp4">
-            Denne browser understøtter ikke videoafspilleren.
-    </video>
-    <section class="panel">
-        <button onclick="videoPlayer.test()">Test</button>
-        <button onclick="videoPlayer.playPause()">Start</button>
-
-        <!-- her bliver videoen interaktiv -->
-        <button onclick="videoPlayer.hopTil(0,0)">Hop til begyndelsen</button>
-        <button onclick="videoPlayer.hopTil(4,23)">Hop til en position</button>
-        <button onclick="videoPlayer.hopTil(6,19)">Hop til en position</button>
-    </section>
-    <script src="js/video-interaktiv.js"></script>
+    <section>
+        <video id="minVideo" width="600">
+            <h2>Interaktiv video</h2>
+            <source 
+                src="assets/video/os_simplyUpload.mp4" 
+                type="video/mp4">
+                Denne browser understøtter ikke videoafspilleren.
+        </video>
+        <div class="panel">
+            <!-- her bliver videoen interaktiv -->
+            <button onclick="videoPlayer.test()">metode()</button>
+            <button onclick="videoPlayer.playPause()">Start/Stop</button>
+            <button onclick="videoPlayer.hopTil(0,0)">Hop til begyndelsen</button>
+            <button onclick="videoPlayer.hopTil(4,23)">Hop til 04:23</button>
+            <button onclick="videoPlayer.hopTil(6,19)">Hop til 06:19</button>
+        </div>
+    </section>        
 
     </main>
     <footer>
         &copy; petj 2025
     </footer>
-    
+    <script src="js/video-interaktiv.js"></script>
 </body>
 </html>
