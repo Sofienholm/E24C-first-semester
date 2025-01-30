@@ -6,7 +6,7 @@ Her er en ide til, hvordan løsningen kan se ud med den interaktive video. Jeg h
 
 * Se her: [Video Object Properties](https://www.w3schools.com/jsref/dom_obj_video.asp)
 
-# Audio
+## Audio
 
 Audio-scripts ligner i høj grad video. 
 
