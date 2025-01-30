@@ -4,7 +4,6 @@
  * Formål: interaktiv video eksempel
  * Se også @URI: https://www.w3schools.com/jsref/dom_obj_video.asp
  */
-console.log("Interaktivt video script er aktivt :-)")
 
 // video link
 let vid = document.getElementById("minVideo")
