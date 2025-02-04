@@ -1,6 +1,8 @@
-# Drag and drop demo
+# Drag and drop Quizz
 
-Script med inspiration fra [W3 Schools: "HTML Drag and Drop"](//www.w3schools.com/HTML/html5_draganddrop.asp)
+Her er eksempler på den type kode vi bruger i dagens øvelse.
+
+Script med en del inspiration fra [W3 Schools: "HTML Drag and Drop"](//www.w3schools.com/HTML/html5_draganddrop.asp)
 
 ## Funktionerne
 
