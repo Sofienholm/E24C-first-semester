@@ -33,9 +33,10 @@ Feedbacken kan gives via **ondrop** sådan fra HTML elementet:
 
 Husk, at du selv kan tilføje de funktioner, som skal kaldes ved:
 
-* ondrop
-* ondragover
+* ondrop="minFedeFunktion(en,to,tre){ ... mere logik her ...  }
+* ondragover="minHeltAndenFunktion(){ ... mere cool logik her ... }
 * etc.
+
 
 Se mulighederne med drag events [her](https://www.w3schools.com/jsref/obj_dragevent.asp).
 
