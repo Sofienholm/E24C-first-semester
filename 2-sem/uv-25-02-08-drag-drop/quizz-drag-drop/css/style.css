@@ -40,4 +40,10 @@ img {
 .videre {
     clear: both;
     display: block;
+    background-color: rgb(3, 48, 28);
+    padding: 2ch;
+    width: 33%;
+    margin: auto;
+    margin-top: 24px;
+    border-radius: 10px;
 }

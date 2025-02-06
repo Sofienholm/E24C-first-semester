@@ -6,7 +6,7 @@
 
 // Hiscore - sådan
 let score = 0
-hiscore.innerHTML = localStorage.getItem("hiscore") + " Kan du gøre det bedre?"
+hiscore.innerHTML = "Bedste score er: " + localStorage.getItem("hiscore") + " Kan du gøre det bedre?"
 
 
 // tillader drop
@@ -16,7 +16,7 @@ function allowDrop(ev) {
 
 // drag
 function drag(ev) {
-ev.dataTransfer.setData("text", ev.target.id)
+    ev.dataTransfer.setData("text", ev.target.id)
 }
 
 // drop
