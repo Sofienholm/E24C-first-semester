@@ -1,0 +1,28 @@
+{
+  "burgere": [
+    {
+      "id": 1,
+      "burger": "Ordinær",
+      "ingredienser": "bøf, tomat, ost",
+      "pris": 82
+    },
+    {
+      "id": 2,
+      "burger": "Bacon",
+      "ingredienser": "bøf, tomat, bacon, ost",
+      "pris": 87
+    },
+    {
+      "id": 3,
+      "burger": "Hawaian",
+      "ingredienser": "bøf, tomat, ost, annanas",
+      "pris": 86
+    },
+    {
+      "id": 4,
+      "burger": "RumpSteak",
+      "ingredienser": "rump steak, tomat, ost, rucola salat",
+      "pris": 99
+    }
+  ]
+}
