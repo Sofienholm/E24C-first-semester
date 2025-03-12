@@ -45,7 +45,26 @@ vis.innerHTML = tilStreng // demo: sådan ser datastrengen ud
 // Web storage: localStorage gemmer i browseren
 let gemStreng = localStorage.setItem("gemStreng", tilStreng)
 
-// kan nu hentes frem og gemmes igen ...
-console.log("--- test ---")
-console.log( localStorage.getItem("gemStreng") )
-  
+ let hentData = localStorage.getItem("gemStreng")
+ console.log("--- henter data ---")
+ console.log(hentData)
+
+ visGemt.innerHTML = hentData
+
+ // vi laver strengen om til JSON så vi kan bruge det i scriptet
+ lavOmTilJSON = JSON.parse(hentData)
+ // noget bedre ...
+ console.log("--- nu som JSON ---")
+ console.log(lavOmTilJSON)
+
+// vi får en funktion til at lave velformatteret HTML til siden
+function lavNogetHTML( detGemte ){
+  return `
+    <article>
+      <h2> ${detGemte.name} <h2>
+      <p> 
+        Ingredienser: ${detGemte.tags[0]}
+      </p>
+    </article>
+  `
+}

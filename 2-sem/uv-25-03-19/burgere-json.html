@@ -32,10 +32,11 @@
     <script>
         /**
          * Scriptet burde ligge som en ekstern fil
-         * men hwa ....
+         * så det gør vi da ... om lidt!
          */
 
-        // datasæt
+        // datasæt: nogen burgere, læg mærke til ingredienserne
+        // find den eller de burgere som indholder ____.
          const minListe = {
             "burgere": [
               {
@@ -75,9 +76,13 @@ result.innerHTML = minListe.burgere[0].id
 + "<br>Ingredienser: "
 + minListe.burgere[0].ingredienser
 */
+
 // foreach loop
 minListe.burgere.forEach(visBurgerne)
 
+// Brug JavaScript til din markup
+// vi gider selvfølgelig ikke at skrive det samme igen og igen
+// funktionen laver vores markup og tilføjer data via variabler
 function visBurgerne(enBurger){
   result.innerHTML += "<tr>"
   + "<td class='burger'>"
@@ -112,9 +117,16 @@ console.log("Her er ordet: ")
 console.log(findOrd)
 
 // Filter: Burgere med annanas
-const mitFlter = minListe.burgere
-const findTomater = mitFlter.filter(x => x.ingredienser.includes("bacon"))
-console.log(findTomater)
+const mitFlter = minListe.burgere // kopierer listen
+const findBacon = mitFlter.filter(x => x.ingredienser.includes("bacon")) // her fitreres
+console.log("--- viser dem med bacon i ---") // test
+console.log(findBacon) // q.e.d.
+
+/**
+ * Filteret laver et nyt objekt
+ * der herefter kan bruges i produktionen
+ * Kunne udløses af en knap eller et inputfelt
+ */
 
 </script>
 
