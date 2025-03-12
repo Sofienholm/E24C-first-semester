@@ -7,7 +7,7 @@ produkter = {
     name: "Amazing Hops",
     type: "pilsner",
     city: "New York",
-    tags: ["Ale", "IPA", "ECO","Weissbier"]
+    tags: ["Ale", "IPA", "ECO","Weissbier", "Nisseøl"]
   }
   
   //result.innerHTML = person.tags[0]
@@ -59,12 +59,54 @@ let gemStreng = localStorage.setItem("gemStreng", tilStreng)
 
 // vi får en funktion til at lave velformatteret HTML til siden
 function lavNogetHTML( detGemte ){
-  return `
-    <article>
-      <h2> ${detGemte.name} <h2>
+  return visObjektet.innerHTML = `
+    <article class="visObjekt">
+      <h2> ${detGemte.name} </h2>
       <p> 
         Ingredienser: ${detGemte.tags[0]}
       </p>
     </article>
   `
 }
+
+lavNogetHTML( lavOmTilJSON ) // funktionen fyres af
+
+/** 
+ * Vi sender JSON-objektet ind i funktionen
+ * ${  } kan hente data og variabler ind i backticks
+ *
+ * Nu kan du:
+ * - lave JSON data
+ * - forvandle JSON til en streng
+ * - gemme strengen i hukommelsen
+ * - hente strengen frem igen fra hukommelsen
+ * - forvandle den hentede streng til JSON igen
+ */
+
+// Bonustip: hva så med alle ingredienserne, ligner det ikke et array?
+// Jowda:
+
+function nuMedLoop( jsonHer ){
+  console.log("nuMedLoop() kører")
+  // vi klipper lige <article> i stumper
+  let medTags = `
+    <article class="visObjekt">
+      <h2> ${jsonHer.name} </h2>
+      <ul>
+  `
+  // så looper vi ingredienserne ud i en nydelig liste
+  // <ul> begynder ovenover.
+  for (i=0; i< jsonHer.tags.length; i++){
+    medTags += "<li>" + jsonHer.tags[i] + "</li>"
+  }
+  // og så lukker vi listen og article på en pæn måde:
+  medTags += `
+    </ul> <!-- listen lukkes -->
+    </article> <!-- containeren lukkes -->
+  `
+  return tagLst.innerHTML = medTags
+}
+
+// vi kalder på funktionen:
+nuMedLoop( lavOmTilJSON )
+
