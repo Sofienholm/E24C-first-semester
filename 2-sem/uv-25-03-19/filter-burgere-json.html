@@ -29,10 +29,19 @@
       </tr>
     </table>
 
+  <h2>Kreativ øvelse</h2>
+  <p>Rediger JSON'en i variablen minListe.</p>
+  <ul>
+    <li>Lav ingredienser om til en JSON liste (array)</li>
+    <li>Lav en funktion, der kan loope listen af burgere ud. Brug gerne visBurgerne som model; men giv funktionen et nyt navn</li>
+    <li>Tilføj et loop til funktionen, der looper ingredienslisterne ud.</li>
+  </ul>
+
     <script>
         /**
          * Scriptet burde ligge som en ekstern fil
-         * så det gør vi da ... om lidt!
+         * så det gør vi lige ...
+         * (ord som "lige" og "bare" er mega-tabu, når du skriver kode.)
          */
 
         // datasæt: nogen burgere, læg mærke til ingredienserne
@@ -113,12 +122,14 @@ console.log(filteredData)
 
 // søg på et bestemt ord:
 const findOrd = data.filter(person => person.name.includes("Jim"));
+
 console.log("Her er ordet: ")
 console.log(findOrd)
 
 // Filter: Burgere med annanas
 const mitFlter = minListe.burgere // kopierer listen
 const findBacon = mitFlter.filter(x => x.ingredienser.includes("bacon")) // her fitreres
+
 console.log("--- viser dem med bacon i ---") // test
 console.log(findBacon) // q.e.d.
 
