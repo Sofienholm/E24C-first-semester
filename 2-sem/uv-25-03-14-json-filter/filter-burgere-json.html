@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burgere - JSON med liste</title>
+    <style>
+      th, td {
+        text-align: left;
+        border: 1px solid goldenrod;
+        padding: 8px;
+      }
+    </style>
+</head>
+<body>
+    <h1>Burgere</h1>
+    <h2>Fra JSON objekt</h2>
+
+<hr>
+
+    <!-- her kommer menuen -->
+     <h3>Vores burgere</h3>
+    <table id="result">
+      <tr>
+        <th>Nr.</th>
+        <th>Burger</th>
+        <th>Fyld</th>
+        <th>Pris</th>
+      </tr>
+    </table>
+
+  <h2>Kreativ øvelse</h2>
+  <p>Rediger JSON'en i variablen minListe.</p>
+  <ul>
+    <li>Lav ingredienser om til en JSON liste (array)</li>
+    <li>Lav en funktion, der kan loope listen af burgere ud. Brug gerne visBurgerne som model; men giv funktionen et nyt navn</li>
+    <li>Tilføj et loop til funktionen, der looper ingredienslisterne ud.</li>
+  </ul>
+
+    <script>
+        /**
+         * Scriptet burde ligge som en ekstern fil
+         * så det gør vi lige ...
+         * (ord som "lige" og "bare" er mega-tabu, når du skriver kode.)
+         */
+
+        // datasæt: nogen burgere, læg mærke til ingredienserne
+        // find den eller de burgere som indholder ____.
+         const minListe = {
+            "burgere": [
+              {
+                "id": 1,
+                "burger": "Ordinær",
+                "ingredienser": "Bøf, tomat, ost",
+                "pris": 82
+              },
+              {
+                "id": 2,
+                "burger": "Bacon",
+                "ingredienser": "Bøf, tomat, bacon, ost",
+                "pris": 87
+              },
+              {
+                "id": 3,
+                "burger": "Hawaian",
+                "ingredienser": "Bøf, tomat, ost, annanas",
+                "pris": 86
+              },
+              {
+                "id": 4,
+                "burger": "RumpSteak",
+                "ingredienser": "Rump steak, tomat, ost, rucola salat",
+                "pris": 99
+              }
+            ]
+          }
+
+// console.log(minListe)
+
+// viser en burger:
+/*
+result.innerHTML = minListe.burgere[0].id
++ ") "
++ minListe.burgere[0].burger
++ "<br>Ingredienser: "
++ minListe.burgere[0].ingredienser
+*/
+
+// foreach loop
+minListe.burgere.forEach(visBurgerne)
+
+// Brug JavaScript til din markup
+// vi gider selvfølgelig ikke at skrive det samme igen og igen
+// funktionen laver vores markup og tilføjer data via variabler
+function visBurgerne(enBurger){
+  result.innerHTML += "<tr>"
+  + "<td class='burger'>"
+  + enBurger.id
+  + "</td>"
+  + "<td>"
+  + enBurger.burger
+  + "</td>"
+  + "<td>" 
+  + enBurger.ingredienser
+  + "</td> "
+  + "<td>" 
+  + enBurger.pris
+  + "</td >"
+  + "<tr>"
+}
+
+// JSON filter: eksempel
+const data = [
+  { "name": "John", "age": 30 },
+  { "name": "Jane", "age": 25 },
+  { "name": "Jim", "age": 35 }
+];
+
+// sådan filtreres JSON:
+const filteredData = data.filter(person => person.age >= 30);
+console.log(filteredData)
+
+// søg på et bestemt ord:
+const findOrd = data.filter(person => person.name.includes("Jim"));
+
+console.log("Her er ordet: ")
+console.log(findOrd)
+
+// Filter: Burgere med annanas
+const mitFlter = minListe.burgere // kopierer listen
+const findBacon = mitFlter.filter(x => x.ingredienser.includes("bacon")) // her fitreres
+
+console.log("--- viser dem med bacon i ---") // test
+console.log(findBacon) // q.e.d.
+
+/**
+ * Filteret laver et nyt objekt
+ * der herefter kan bruges i produktionen
+ * Kunne udløses af en knap eller et inputfelt
+ */
+
+</script>
+
+</body>
+</html>

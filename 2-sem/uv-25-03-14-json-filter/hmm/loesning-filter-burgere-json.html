@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burgere - JSON med liste</title>
+    <style>
+      th, td {
+        text-align: left;
+        border: 1px solid goldenrod;
+        padding: 8px;
+      }
+    </style>
+</head>
+<body>
+    <h1>Burgere</h1>
+    <h2>Fra JSON objekt</h2>
+
+<hr>
+
+    <!-- her kommer menuen -->
+     <h3>Vores burgere</h3>
+    <div id="result"></div>
+
+  <h2>Kreativ øvelse</h2>
+  <p>Rediger JSON'en i variablen minListe.</p>
+  <ul>
+    <li>Lav ingredienser om til en JSON liste (array)</li>
+    <li>Lav en funktion, der kan loope listen af burgere ud. Brug gerne visBurgerne som model; men giv funktionen et nyt navn</li>
+    <li>Tilføj et loop til funktionen, der looper ingredienslisterne ud.</li>
+  </ul>
+
+    <script>
+        /**
+         * Scriptet burde ligge som en ekstern fil
+         * så det gør vi lige ...
+         * (ord som "lige" og "bare" er mega-tabu, når du skriver kode.)
+         */
+
+        // datasæt: nogen burgere, læg mærke til ingredienserne
+        // find den eller de burgere som indholder ____.
+         const minListe = {
+            "burgere": [
+              {
+                "id": 1,
+                "burger": "Bedstemors Bedste Burger",
+                "ingredienser": ["Bøf", "tomat", "ost"],
+                "pris": 82
+              },
+              {
+                "id": 2,
+                "burger": "Bacon Beauty",
+                "ingredienser": ["Bøf", "tomat", "bacon", "ost"],
+                "pris": 87
+              },
+              {
+                "id": 3,
+                "burger": "Hawaian Havoc",
+                "ingredienser": ["Bøf", "tomat", "ost", "annanas"],
+                "pris": 86
+              },
+              {
+                "id": 4,
+                "burger": "Rump Steak Feast",
+                "ingredienser": ["Rump steak", "tomat", "ost", "rucola salat"],
+                "pris": 99
+              }
+            ]
+          }
+
+          console.log(minListe)
+
+// viser en burger:
+/*
+result.innerHTML += minListe.burgere[0].id
++ ") "
++ minListe.burgere[0].burger
++ "<br>Ingredienser: "
++ minListe.burgere[0].ingredienser
+*/
+
+// loop indholdet ud
+
+// funktionen
+function listeMedListe( minJSON ){
+  for (i=0;i<minJSON.burgere.length;i++){
+    result.innerHTML += `
+    <h3>  Menu nr. (${minListe.burgere[i].id}) 
+    ${minListe.burgere[i].burger} </h3>
+
+    Ingredienser:
+
+    <ul> 
+    `
+
+      // et nyt loop inde i loopet henter ingredienserne frem
+      for (n=0; n<minJSON.burgere[i].ingredienser.length;n++){
+        result.innerHTML += `
+         <li> ${minListe.burgere[i].ingredienser[n]} </li>
+                `
+      }
+
+      // vi afslutter tabelrækken
+      result.innerHTML += `
+      </ul>
+      <br>Pris: ${minListe.burgere[i].pris}
+      </p>
+      <hr>
+      `
+
+  }
+}
+
+// kald funktionen
+listeMedListe( minListe )
+</script>
+
+</body>
+</html>
