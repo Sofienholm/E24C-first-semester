@@ -3,7 +3,7 @@
  * repetition: JSON formatet og web storage
  */
 
-produkter = {
+let produkter = {
     name: "Amazing Hops",
     type: "pilsner",
     city: "New York",
