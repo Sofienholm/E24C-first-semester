@@ -8,4 +8,4 @@ Wagerfiels kode kræver, at alle billeder har ensaartet bredde og højde. Når d
 
 Mappen med kompileret parallax-kode fra Wagerfield stammer fra:
 
-Wagerfield et al. [Parllax](https://github.com/wagerfield/parallax/releases) (Som besøgt 2025.03.17)
+Wagerfield et al. [Parallax](https://github.com/wagerfield/parallax/releases) (Som besøgt 2025.03.17)
