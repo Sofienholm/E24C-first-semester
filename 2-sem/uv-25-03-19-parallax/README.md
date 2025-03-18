@@ -2,7 +2,10 @@
 
 Her er nogen eksempler på parallax til dagens workshop. Dagens øvelse er tilgængelig på Canvas.
 
-Wagerfiels kode kræver, at alle billeder har ensaartet bredde og højde. Når du laver din egen grafik, så sørg for at billedernes transparente lærredstørrelse er ens.
+Wagerfiels kode kræver, at alle billeder har ensartet bredde og højde. Når du laver din egen grafik, så sørg for at billedernes transparente lærredstørrelse er ens.
+
+./wagerfield-compiled: wagerfield parrallax
+./filter-burgere: JSON med filtrering af data
 
 ## Kilder
 
