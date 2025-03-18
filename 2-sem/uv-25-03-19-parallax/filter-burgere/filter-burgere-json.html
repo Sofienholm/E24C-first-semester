@@ -117,26 +117,30 @@ const data = [
 ];
 
 // sådan filtreres JSON:
+console.log("--- viser personer > 30 ---")
 const filteredData = data.filter(person => person.age >= 30);
 console.log(filteredData)
 
 // søg på et bestemt ord:
+console.log("--- viser dem, der hedder Jim ---")
 const findOrd = data.filter(person => person.name.includes("Jim"));
 
-console.log("Her er ordet: ")
+console.log("Her er ordet: Jim \n\n")
 console.log(findOrd)
 
-// Filter: Burgere med annanas
+// Filter: Burgere med bacon
+console.log("--- burgere med bacon kommer her ---")
 const mitFlter = minListe.burgere // kopierer listen
 const findBacon = mitFlter.filter(x => x.ingredienser.includes("bacon")) // her fitreres
 
-console.log("--- viser dem med bacon i ---") // test
+console.log("--- og her er den eller de så ---") // test
 console.log(findBacon) // q.e.d.
 
 /**
  * Filteret laver et nyt objekt
  * der herefter kan bruges i produktionen
- * Kunne udløses af en knap eller et inputfelt
+ * 
+ * Opgave: lav nu den kode, som viser 
  */
 
 </script>
