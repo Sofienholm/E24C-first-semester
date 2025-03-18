@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "rellax": "^1.12.1"
+  },
+  "name": "uv-25-03-19-parallax",
+  "description": "Her er nogen eksempler på parallax til dagens workshop. Dagens øvelse er tilgængelig på Canvas.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
