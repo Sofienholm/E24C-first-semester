@@ -7,6 +7,23 @@
     <style>
         main {
             height: 200vh;
+            width: 700vh;
+        }
+
+        /** husk: position relative kan være praktisk */
+        div {
+            position: relative;
+            width: 172px;
+            height: 92px;
+        }
+
+        /* classes kan tilføjes med mellemrum i din html */
+        .orange {
+            background-color: rgba(236, 69, 40, 0.2);
+            left: 123px;
+        }
+        .yellow {
+            background-color: #bef15633;
         }
     </style>
 </head>
@@ -15,21 +32,31 @@
 
     <main>
 
-    <div class="rellax">
-        I’m that default chill speed of "-2"
-      </div>
-      <div class="rellax" data-rellax-speed="7">
+    
+      <div class="rellax orange" data-rellax-speed="9">
         I’m super fast!!
       </div>
-      <div class="rellax" data-rellax-speed="-4">
+      <div class="rellax yellow" data-rellax-speed="-4">
         I’m extra slow and smooth
+      </div>
+      <div class="rellax yellow" data-rellax-speed="4">
+        I’m that default chill speed
       </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
     <script>
-        // Accepts any class name
-        var rellax = new Rellax('.rellax');
+      //default JS Setting
+      
+      var rellax = new Rellax('.rellax', {
+        //center:true
+        //vertical: true
+        horizontal:true
+      });
+      
+
+      
+
     </script>
 </body>
 </html>
