@@ -33,9 +33,11 @@ Pakkerne vil derefter blive lagt ind i mappen:
 
 [Se denne tutorial på W3](https://www.w3schools.com/nodejs/).
 
-## Nodejs: Windows
+### Problem: Nodejs Windows
 
-Hvis du får en fejl, når du vil køre npm -v så prøv:
+Når nodejs er installeret, så kan du køre pakke-administratoren i den indbyggede terminal.
+
+På Windows kan det være lidt bøvlet første gang, fordi en sikkerhedsindstilling skal justeres. Hvis du får en fejl om at scriptet ikke vil køre, når du skriver npm -v så prøv:
 
 Set-ExecutionPolicy -Scope CurrentUser
 
@@ -47,9 +49,13 @@ Nu kan du køre npm-kommandoer. Test det med:
 
 npm -v
 
+Terminalen burde returnere noget a la 10.9.2, der er den aktuelle version af npm.
+
 Prøv fx at finde font awesome sådan:
 
 npm search awesome
+
+----
 
 ## Kilder
 
