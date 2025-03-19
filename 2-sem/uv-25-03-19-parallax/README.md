@@ -33,6 +33,24 @@ Pakkerne vil derefter blive lagt ind i mappen:
 
 [Se denne tutorial på W3](https://www.w3schools.com/nodejs/).
 
+## Nodejs: Windows
+
+Hvis du får en fejl, når du vil køre npm -v så prøv:
+
+Set-ExecutionPolicy -Scope CurrentUser
+
+I inputfeltet skal du tilføje:
+
+bypass
+
+Nu kan du køre npm-kommandoer. Test det med:
+
+npm -v
+
+Prøv fx at finde font awesome sådan:
+
+npm search awesome
+
 ## Kilder
 
 Mappen med kompileret parallax-kode fra Wagerfield stammer fra:
