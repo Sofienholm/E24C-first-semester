@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rellax</title>
+    <style>
+        main {
+            height: 200vh;
+        }
+    </style>
+</head>
+<body>
+    <h1>Relllax</h1>
+
+    <main>
+
+    <div class="rellax">
+        I’m that default chill speed of "-2"
+      </div>
+      <div class="rellax" data-rellax-speed="7">
+        I’m super fast!!
+      </div>
+      <div class="rellax" data-rellax-speed="-4">
+        I’m extra slow and smooth
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <script>
+        // Accepts any class name
+        var rellax = new Rellax('.rellax');
+    </script>
+</body>
+</html>
