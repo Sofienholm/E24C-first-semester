@@ -10,8 +10,7 @@ const kortCenter = [51.505, -0.09] // London
 // kortet centreres nu på kortCenter
 var map = L.map('map').setView( kortCenter , 15)
 
-// copyright informationer skal være i orden, så brug altid:
-
+// VIGTIGT: copyright informationer skal være i orden, så brug altid:
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'

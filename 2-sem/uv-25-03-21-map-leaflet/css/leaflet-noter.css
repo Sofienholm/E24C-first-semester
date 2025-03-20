@@ -7,11 +7,13 @@
 * Kortet skal have en bredde ellers vises det ikke!
 */
 body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(2, 9, 2);
+    color:rgb(230, 252, 230);
 }
 
 /** Kortets container */
 #map { 
     height: 40vh;
-    border: 2px solid black;
+    border: 2px solid rgb(102, 179, 43);
 }
