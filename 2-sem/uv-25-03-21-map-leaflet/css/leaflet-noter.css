@@ -1,0 +1,17 @@
+/**
+* Fil: leaflet-noter.css
+* Formål: styling af landkortside
+*/
+
+/**
+* Kortet skal have en bredde ellers vises det ikke!
+*/
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+/** Kortets container */
+#map { 
+    height: 40vh;
+    border: 2px solid black;
+}
