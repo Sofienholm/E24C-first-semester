@@ -16,4 +16,5 @@ body {
 #map { 
     height: 40vh;
     border: 2px solid rgb(102, 179, 43);
+    border-radius: 50%;
 }
