@@ -66,3 +66,9 @@ map.on('click', onMapClick) // viser positionen i en alert
 
 // Haderslev
 // https://www.openstreetmap.org/search?query=haderslev#map=17/55.250310/9.482092
+
+/** Interaktive funktioner */
+// flyTo()
+let flyvTil = ( position, zoom) => {
+    map.flyTo( position, zoom )
+}

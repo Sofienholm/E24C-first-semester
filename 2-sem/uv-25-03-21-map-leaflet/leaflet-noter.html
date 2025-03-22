@@ -28,6 +28,13 @@
 
     <!-- Herunder indlæses kortet, husk at give det en bredde -->
     <aside id="map"></aside>
+
+    <!-- interaktiv -->
+        <section id="knapper">
+            <button onclick="map.panTo([56.121335,10.160218], 19)">Sønderhøj</button>
+            <button onclick="flyvTil([55.673212,12.56866], 16)">Flyv til Tivoli, København</button>
+            <button onclick="map.panTo([55.391415,10.383496],17)">Panorer til Odense, Munkemose</button>
+        </section>
     <!-- containeren behøvs altså ikke at være en div! -->
 
     <h2>Øvelse A) Geografisk kort</h2>
