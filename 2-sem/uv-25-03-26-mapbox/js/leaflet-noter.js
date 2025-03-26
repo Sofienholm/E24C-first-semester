@@ -69,11 +69,11 @@ map.on('click', onMapClick) // viser positionen i en alert
 
 /** Interaktive funktioner */
 // flyTo()
-let flyvTil = ( position, zoom) => {
+let flyvTil = ( position, zoom, abc) => {
     map.flyTo( position, zoom )
     
     // herefter kan scriptet starte lyd, video etc.
     // ændre innerHTML (DOM'en)
     // style noget .... etc. etc. etc. 
-    tekst.innerHTML = "Tivoli ligger i hjertet af København, tæt ved banegården. Her kan du nyde, etc. ..."
+    tekst.innerHTML = abc
 }
