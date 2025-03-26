@@ -12,15 +12,25 @@ body { margin: 0; padding: 0; }
 </style>
 </head>
 <body>
+
+<h1>Mapbox</h1>
+<h2>Sådan bruger du et "stylet" kort</h2>
+    
 <div id="map"></div>
+
+<ol>
+    <li>Rediger kortet</li>
+    <li>Giv det et passende navn</li>
+    <li>Make public</li>
+    <li>I script: tilføj token og URL til din "map-style"</li>
+</ol>
 
 <script>
     // token (BRUG DIN EGEN TOKEN HER)
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYXNhdGhvb3IiLCJhIjoiY2oyd3hlbzU3MDA5NzJxbm9iMjczanJndCJ9.HahDB7Z1rrD5THIYQh6t4g';
     const map = new mapboxgl.Map({
         container: 'map',
-        // HERUNDER KOMMER LINKET TIL DIN STYLE 
-        style: 'mapbox://styles/asathoor/cl0utivlp00jl14qi4gto0iyl',
+        style: 'mapbox://styles/asathoor/cm8podewb007m01sh9pko53m4',
         center: [12.550343, 55.665957],
         zoom: 8
     });
