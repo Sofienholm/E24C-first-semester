@@ -75,4 +75,5 @@ let flyvTil = ( position, zoom) => {
     // herefter kan scriptet starte lyd, video etc.
     // ændre innerHTML (DOM'en)
     // style noget .... etc. etc. etc. 
+    tekst.innerHTML = "Tivoli ligger i hjertet af København, tæt ved banegården. Her kan du nyde, etc. ..."
 }

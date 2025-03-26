@@ -31,3 +31,8 @@ header, footer {
     padding: 5%;
     text-align: center;
 }
+
+#tekst {
+    text-align: center;
+    font-size: larger;
+}
