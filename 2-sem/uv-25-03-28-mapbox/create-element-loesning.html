@@ -6,9 +6,20 @@
     <title>Document</title>
     <style>
         /* ideelt burde styles ligge i en ekstern fil */
+        body {
+            text-align: center;
+        }
 
         /* Tilføj passende styles og classes, der svarer til det nye element du har skabt */ 
 
+        #foto {
+            width: 250px;
+            height: auto;
+        }
+
+        .runde {
+            border-radius: 50%;
+        }
     </style>
 </head>
 <body>
@@ -17,6 +28,7 @@
         <h2>Eksperiment: indsæt et billede</h2>
     </header>
     <main>
+
         <!-- Herunder skal billedet vises -->
         <section id="billede"></section>
 
@@ -33,12 +45,24 @@
 
     <script>
         // 1) ideelt burde dette script ligge i en ekstern fil
+        // her er jeg doven ...
 
         // 2) brug createElement() til at lave en image tag
+        let mitBillede = document.createElement("img")
 
         // 3) brug dot-syntaks (punktum-skrivning) til at tilføje: src, id og klasse(r)
 
+        // billedet får nogen attributter
+        mitBillede.src = "https://multimusen.dk/wp-content/uploads/c19969a3-fcfd-49a6-91cd-c887a73bf73a-3.jpeg"
+        mitBillede.id = "foto"
+        mitBillede.alt = "Her er en beskrivelse af billedet, så SEO ikke glemmes helt."
+
+        // classes kræver lidt mere; men muligt er det:
+        mitBillede.classList.add("runde")
+
         // 4) lad appendChild() vise billedtaggen inde i <section id="billede"></section>
+        billede.appendChild(mitBillede)
+
     </script>
 </body>
 </html>
