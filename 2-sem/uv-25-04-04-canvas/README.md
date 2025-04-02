@@ -29,5 +29,6 @@ Nu skal vi flytte figuren ved hjælp af WASD-tasterne og key-events.
 * WASD flytter en figur
 * Alternativt kan WASD flytte scenens sætstykker; mens figuren ligger stabilt et sted
 * Når figuren er på en bestemt position skifter scenen. 
+* Animation på canvas
 
 
