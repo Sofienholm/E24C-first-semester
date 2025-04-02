@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduktion til HTML Canvas</title>
+    <link rel="stylesheet" href="css/canvas-noter.css">
+</head>
+<body>
+    <header>
+        <h1>Canvas</h1>
+    </header>
+    <main>
+        <section id="rektanglet">
+            <!-- Canvas -->
+            <canvas id="firkant"></canvas> <br>
+
+            <!-- geometri -->
+            <button onclick="tegnEnFirkant()">Tegn en firkant</button>
+            <button onclick="enSti()">En sti</button>
+            <button onclick="visRidder()">Vis ridderen</button>
+
+            <!-- "viskelæder" -->
+            <button onclick="sletLaerred('firkant')">Visk lærredet ud</button>
+        </section>
+
+        <!-- skjulte elementer -->
+        <div id="skjult">
+            <img id="ridder" src="billeder/knight.jpeg">
+        </div>
+    </main>
+    <footer>
+        &copy; 2025 /petj 
+    </footer>
+    <script src="js/canvas-noter.js"></script>
+</body>
+</html>

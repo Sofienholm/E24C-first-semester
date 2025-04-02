@@ -1,0 +1,18 @@
+/**
+* Fil: canvas-noter.css
+*/
+
+#firkant {
+    width: 768px;
+    height: 768px;
+    border: 1px dotted grey;
+}
+
+#skjult {
+    display: none;
+}
+
+#ridder {
+    width: 400;
+    height: auto;
+}
