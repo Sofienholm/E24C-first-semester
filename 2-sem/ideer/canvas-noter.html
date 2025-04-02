@@ -11,23 +11,33 @@
         <h1>Canvas</h1>
     </header>
     <main>
-        <section id="rektanglet">
+        <section id="geometria">
             <!-- Canvas -->
-            <canvas id="firkant" width="768" height="768"></canvas> <br>
+            <canvas id="firkant" width="400" height="400"></canvas> <br>
 
             <!-- geometri -->
             <button onclick="tegnEnFirkant()">Tegn en firkant</button>
             <button onclick="enSti()">En sti</button>
-            <button onclick="visRidder()">Vis ridderen</button>
+            <button onclick="visRidder()">Vis billede + fragment</button>
+            
+            <button onclick="visSVG()">Tegn en SVG</button>
             <button onclick="tegnEnCirkel()">En cirkel</button>
+            <button onclick="stjerneHimmel()">Mange stjerner</button>
+            <button onclick="gradientNy()">Gradient</button>
 
             <!-- "viskelæder" -->
+            <br>
             <button onclick="sletLaerred('firkant')">Visk lærredet ud</button>
+        
         </section>
 
         <!-- skjulte elementer -->
         <div id="skjult">
+            <!-- pixelbaseret billede -->
             <img id="ridder" src="billeder/knight.jpeg">
+
+            <!-- vektorbaseret billede -->
+            <img id="pentagram" src="billeder/pentagram.svg" alt="pentagram">    
         </div>
     </main>
     <footer>

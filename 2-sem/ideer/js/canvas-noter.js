@@ -83,7 +83,6 @@ let visRidder = () => {
 
     // syntax skaler: drawImage(image, dx, dy, dwidth, dheight)
     ctx.drawImage(image, 0,0, 100,100)
-
     // syntax klip: drawImage(image, sx, sy, swidth, sheight, dx, dy, dwidth, dheight)
     
     //ctx.drawImage(image, 300,200, 768,768, 10,10, 300, 300)
@@ -104,6 +103,27 @@ let visRidder = () => {
     ctx.drawImage(image,350,350, 350, 350, 20, 200, 100,100)
     }
 
+// SVG
+// Billeder kan også være SVG billeder, som er vektor billeder.
+// FEATURE: tilfældig positionering
+
+let visSVG = () => {
+    let svg = document.getElementById("pentagram")
+
+    // tilfældig positionering
+    let x = Math.floor(Math.random()*400)
+    let y = Math.floor(Math.random()*400)
+
+    ctx.drawImage(svg, x,y, 100,100)
+}
+
+// Tegn nu 72 stjerner
+let stjerneHimmel = () => {
+    for (let i = 0; i < 72; i++){
+        visSVG()
+    }
+}
+
 /** Ideer til OPGAVER 
  * 1. Lav en funktion, der tegner en kurve
  * 2. Lav et søjlediagram - med forklarende tekst. Data fra JSON eller array.
@@ -121,10 +141,18 @@ let tegnEnCirkel = () => {
     ctx.stroke() // stregen sættes ind, der tegnes ...
 }
 
-/** ANIMATIONER og canvas - næste gang */
-let minAnimation = () => {
+// GRADIENTER
+// Hentes via fillstyle og strokeStyle
+// fx sådan:
+let gradientNy = () => {
 
+    // lav firkant med en gradient på canvas
+    let gradient = ctx.createLinearGradient(0, 0, 200, 0)
+    gradient.addColorStop(0, tomat) // startfarve
+    gradient.addColorStop(1, guld) // slutfarve
+    ctx.fillStyle = gradient // fylder med gradient
+    ctx.fillRect(0, 0, 400, 400) // fylder firkant med gradient
+    ctx.strokeStyle = tomat // "blyanten er rød"
 }
-
 
 
