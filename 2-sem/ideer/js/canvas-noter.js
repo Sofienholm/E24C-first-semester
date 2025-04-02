@@ -1,5 +1,5 @@
 /**
- * Fil: canvas noter
+ * Fil: HTML Canvas noter
  * Formål: forberedelse af introduktion til canvas og js.
  * Version: 1.0
  */
@@ -37,12 +37,11 @@ let sletLaerred = (navn) => {
 }
 
 /**
- * Andre geometriske former
+ * GEOMETRI
  * Stier og polygoner, Flanagan: 485.
  **/
 
-// tegn en sti på lærredet - lidt sjov med geometrien her
-
+// STI - og lidt geometrisk sjov
 let a = Math.floor(Math.random()*100)
 let b = Math.floor(Math.random()*100)
 
@@ -73,15 +72,21 @@ let enSti = () => {
     }
 }
 
-/** Billeder */
+/** 
+ * BILLEDER
+ * Husk at billeder pixeleerer når der skaleres heftigt.
+ * Brug evt. SVG billeder i stedet.
+ * Billeder skal være *loaded* før de kan bruges.
+ */
 let visRidder = () => {
     let image = document.getElementById("ridder")
 
     // syntax skaler: drawImage(image, dx, dy, dwidth, dheight)
-    ctx.drawImage(image, 0,0, 100,50)
+    ctx.drawImage(image, 0,0, 100,100)
 
     // syntax klip: drawImage(image, sx, sy, swidth, sheight, dx, dy, dwidth, dheight)
-    //ctx.drawImage(image, 0,0, 768,768, 10,10, 300, 300)
+    
+    //ctx.drawImage(image, 300,200, 768,768, 10,10, 300, 300)
     /*
         ctx.drawImage(
         image, src  
@@ -96,9 +101,30 @@ let visRidder = () => {
     */
 
     // drawImage(image, sx, sy, swidth, sheight, dx, dy, dwidth, dheight)
-    //ctx.drawImage(image,350,350, 350, 350, 20, 20, 100,100)
-
+    ctx.drawImage(image,350,350, 350, 350, 20, 200, 100,100)
     }
+
+/** Ideer til OPGAVER 
+ * 1. Lav en funktion, der tegner en kurve
+ * 2. Lav et søjlediagram - med forklarende tekst. Data fra JSON eller array.
+ *   - brug en funktion til at tegne søjlerne
+ *   - brug samme funktion til at tegne teksten
+ * 3. Lav et cirkeldiagram
+*/
+
+// Tegn en CIRKEL på canvaset
+let tegnEnCirkel = () => {
+    ctx.beginPath() // begynder stien
+    ctx.arc(100, 100, 50, 0, Math.PI * 2) // cirkel
+    ctx.fillStyle = tomat // "blyanten er rød"
+    ctx.fill() // fylder cirklen med farve
+    ctx.stroke() // stregen sættes ind, der tegnes ...
+}
+
+/** ANIMATIONER og canvas - næste gang */
+let minAnimation = () => {
+
+}
 
 
 
