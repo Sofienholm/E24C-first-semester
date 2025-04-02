@@ -20,7 +20,7 @@ let blaa = "#8A2BE2" // Blå violet (Blue Violet)
 
 // tegn en firkant
 let tegnEnFirkant = () => {    
-    c.fillStyle = turkis // farve fra globale var
+    c.fillStyle = groenGul // farve fra globale var
     c.strokeStyle 
     c.fillRect(30,20,100,100) // definerer hjørnernes position
 }
@@ -136,7 +136,7 @@ let stjerneHimmel = () => {
 let tegnEnCirkel = () => {
     ctx.beginPath() // begynder stien
     ctx.arc(100, 100, 50, 0, Math.PI * 2) // cirkel
-    ctx.fillStyle = tomat // "blyanten er rød"
+    ctx.fillStyle = turkis // "blyanten er rød"
     ctx.fill() // fylder cirklen med farve
     ctx.stroke() // stregen sættes ind, der tegnes ...
 }
@@ -145,7 +145,6 @@ let tegnEnCirkel = () => {
 // Hentes via fillstyle og strokeStyle
 // fx sådan:
 let gradientNy = () => {
-
     // lav firkant med en gradient på canvas
     let gradient = ctx.createLinearGradient(0, 0, 200, 0)
     gradient.addColorStop(0, tomat) // startfarve
@@ -155,4 +154,94 @@ let gradientNy = () => {
     ctx.strokeStyle = tomat // "blyanten er rød"
 }
 
+// TEKSTER
+// Du kan også skrive tekst på canvaset
+let skrivTekst = () => {
+    ctx.font = "30px Arial" // skrifttype og størrelse
+    ctx.fillStyle = groenGul // farve
+    ctx.fillText("Der var engang en lille frø.", 10, 50) // tekst og position
+    roterTekst() // roterer teksten
+    }
 
+// skrifttype og størrelse
+// hvilke skrifttyper findes der?
+// https://www.w3schools.com/cssref/css_websafe_fonts.asp
+
+// Alternative skrifttyper  
+
+
+// rotere tekst
+let roterTekst = () => {
+    ctx.save() // gemmer den nuværende tilstand
+    ctx.translate(200, 200) // flytter teksten
+    ctx.rotate(Math.PI / 3) // roterer teksten
+    ctx.fillText("Nu roterer det ...", 0, 0) // tekst og position
+    ctx.restore() // gendanner den tidligere tilstand
+}
+
+/**
+ * OPGAVE (brainstorm)
+ * Lav en init() funtion, der sætter en scene.
+ * Tilføj transparente figurer i SVG.
+ * Lav "sætstykker" i stil med en teaterkulisse:
+ * 
+ * - lav en scene i form af en canvas med id'en scene
+ * - lav en baggrund i samme størrelse som scenen
+ * - lav en forgrund
+ * - lav en midtergrund
+ * - lav en figur i forgrunden
+ * - lav en mindre version af figuren i baggrunden
+ * - placer en mørk træstup i forgrunden til højre
+ * - forrest lav nogen blomster og græsstrå, et par sten etc.
+ * - lav en funktion der placerer en sky
+ * - lad et loop skabe ca. syv skyer
+ *
+ */
+
+/**
+ * FLYT EN FIGUR MED TASTETRYK
+ * (Næste )
+ */
+
+// flyt en figur med tastetryk
+let figur = document.getElementById("figur")
+let figurX = 0
+let figurY = 0
+let figurWidth = 100
+let figurHeight = 100
+let figurSpeed = 10
+let figurDirection = 0 // 0 = ingen retning
+
+// tilføj figuren til canvaset
+ctx.drawImage(figur, figurX, figurY, figurWidth, figurHeight)
+// tilføj eventlistener til canvaset
+
+// WASD tasterne
+let moveUp = 87 // W
+let moveDown = 83 // S
+let moveLeft = 65 // A
+let moveRight = 68 // D
+
+// tilføj eventlistener til canvaset
+let tastetryk = (event) => {
+    switch(event.keyCode) {
+        case moveUp:
+            figurY -= figurSpeed 
+            break
+        case moveDown:
+            figurY += figurSpeed
+            break
+        case moveLeft:
+            figurX -= figurSpeed
+            break
+        case moveRight:
+            figurX += figurSpeed
+            break
+    }
+    // opdaterer scen
+    ctx.clearRect(0, 0, canvas.width, canvas.height) // slet lærredet
+    // tegn baggrunden igenm etc. etc.
+    ctx.drawImage(figur, figurX, figurY, figurWidth, figurHeight)
+}
+// tilføj eventlistener til canvaset
+document.addEventListener("keydown", tastetryk)

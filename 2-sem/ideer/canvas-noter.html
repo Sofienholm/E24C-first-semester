@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Canvas</h1>
+        <h1>Grafik med Canvas</h1>
     </header>
     <main>
         <section id="geometria">
@@ -19,6 +19,7 @@
             <button onclick="tegnEnFirkant()">Tegn en firkant</button>
             <button onclick="enSti()">En sti</button>
             <button onclick="visRidder()">Vis billede + fragment</button>
+            <button onclick="skrivTekst()">Tekst</button>
             
             <button onclick="visSVG()">Tegn en SVG</button>
             <button onclick="tegnEnCirkel()">En cirkel</button>
@@ -26,15 +27,18 @@
             <button onclick="gradientNy()">Gradient</button>
 
             <!-- "viskelæder" -->
-            <br>
             <button onclick="sletLaerred('firkant')">Visk lærredet ud</button>
-        
+            
+            <p>WASD flytter Tux.</p>
         </section>
 
         <!-- skjulte elementer -->
         <div id="skjult">
             <!-- pixelbaseret billede -->
             <img id="ridder" src="billeder/knight.jpeg">
+
+            <!-- transparent figur (wasd)-->
+            <img id="figur" src="billeder/penguin-158551__180.webp" alt="wasd">
 
             <!-- vektorbaseret billede -->
             <img id="pentagram" src="billeder/pentagram.svg" alt="pentagram">    

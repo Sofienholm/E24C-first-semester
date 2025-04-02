@@ -4,10 +4,15 @@
 
 body {
     text-align: center;
+    background-color: darkblue;
+    font-family: cursive;
+    color: white;
 }
 
 #firkant {
-    border: 1px dotted grey;
+    border: 5px dotted rgb(225, 57, 177);
+    background-color: rgb(253, 242, 230);
+    border-radius: 12%;
 }
 
 #skjult {
@@ -49,5 +54,5 @@ button {
 }
 
 button:last-child {
-    background-color: rgb(68, 117, 20);
+    background-color: rgb(172, 232, 255);
 }
