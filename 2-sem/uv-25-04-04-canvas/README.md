@@ -18,7 +18,7 @@ HTML elementet canvas bruges, når du vil fremstille grafik med programmering. C
 
 Du lærer at lave en scene, lidt som et dukketeater. Du lærer at placere:
 
-* figur
+* figur (en eller flere!)
 * forgrund, mellemgrund, baggrund
 * styring ved hjælp af knapper og funktioner
 
