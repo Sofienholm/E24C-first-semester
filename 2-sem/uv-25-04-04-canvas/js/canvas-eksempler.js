@@ -4,14 +4,16 @@
  * Version: 1.0
  */
 
-// GLOBALE VARIABLER
-
+/**
+ * GLOBALE VARIABLER
+ */
+ 
 // Scenen
 let canvas = document.querySelector("#scene") // selector
 let c = canvas.getContext("2d") // vi tegner i 2D a la Flanagan ;-)
 let ctx = c // og laver et alias der svarer til W3 eksempler ;-)
 
-// Farverne
+// Farver
 let tomat = "#FF6347" // Tomat (Tomato)
 let guld = "rgba(255, 99, 71, 0.4)" // Guld (Gold)
 let groenGul = "#ADFF2F" // Grøn gul (Green Yellow)
@@ -26,15 +28,20 @@ let sletLaerred = (navn) => {
 }
 
 /**
- * GEOMETRI
- * Stier og polygoner, Flanagan: 485.
+ * CANVAS GEOMETRI
+ * (kommer af: geo = jorden, metria = opmåling af ...)
+ * Stier, former og polygoner, Flanagan: 485 ff.
  **/
 
 // REKTANGEL (og kvadrat)
-let tegnEnFirkant = () => {    
-    c.fillStyle = groenGul // farve fra globale var
-    c.strokeStyle 
-    c.fillRect(30,20,100,100) // definerer hjørnernes position
+let tegnEnFirkant = () => {
+    ctx.beginPath()
+    ctx.lineWidth = "10"
+    ctx.strokeStyle = "green"
+    ctx.fillStyle = turkis
+    ctx.rect(100, 100, 123, 123)
+    ctx.stroke()
+    ctx.fillRect(100,100,123,123)
 }
 
 // STI - og lidt geometrisk sjov
@@ -48,23 +55,24 @@ let enSti = () => {
     ctx.lineTo(b, 100) // tegner
     ctx.lineTo(b, 435) // tegner videre
     ctx.strokeStyle = tomat // "blyanten er rød"
+    // former kan laves med en masse moveTo og lineTo'er
 
-    // fill
-    ctx.fillStyle = guld
-    ctx.fill()
+    // fill i to trin
+    ctx.fillStyle = guld // fyld eller "farve" defineres
+    ctx.fill() // fyldet anvendes
 
-    ctx.lineWidth = 4
-    
+    // linjerne i to trin
+    ctx.lineWidth = 4 // hvor bred skal linjen være?
     ctx.stroke() // stregen sættes ind, der tegnes ...
    
-    a += 25
-    b += 33
+    a += 25 // bare for at flytte dem lidt næste gang
+    b += 33 // overvej en tilfældig placering inden for lærredet ... hvordan?
 
     // reset når værdien bliver for stor
-    if (a > 500){
+    if (a > 400){
         Math.floor(Math.random()*200)
     }
-    if (b > 500){
+    if (b > 400){
         Math.floor(Math.random()*20)
     }
 }
@@ -125,7 +133,7 @@ let stjerneHimmel = () => {
 // Tegn en CIRKEL på canvaset
 let tegnEnCirkel = () => {
     ctx.beginPath() // begynder stien
-    ctx.arc(100, 100, 50, 0, Math.PI * 2) // cirkel
+    ctx.arc(100, 100, 50, 0, Math.PI * 2)
     ctx.fillStyle = turkis // "blyanten er rød"
     ctx.fill() // fylder cirklen med farve
     ctx.stroke() // stregen sættes ind, der tegnes ...
@@ -147,9 +155,26 @@ let gradientNy = () => {
 // TEKSTER
 // Du kan også skrive tekst på canvaset
 let skrivTekst = () => {
+
+    const dato = new Date()
+
+    const uge = [
+        "Søndag",
+        "Mandag",
+        "Tirsdag",
+        "Onsdag",
+        "Torsdag",
+        "Fredag",
+        "Lørdag"
+    ]
+
+    let iDag = "I dag er det " 
+    + uge[dato.getDay()]
+    + "."
+
     ctx.font = "30px Arial" // skrifttype og størrelse
-    ctx.fillStyle = groenGul // farve
-    ctx.fillText("Der var engang en lille frø.", 10, 50) // tekst og position
+    ctx.fillStyle = moerk // farve
+    ctx.fillText( iDag, 10, 50) // tekst og position
     roterTekst() // roterer teksten
     }
 
@@ -164,50 +189,24 @@ let roterTekst = () => {
     ctx.save() // gemmer den nuværende tilstand
     ctx.translate(200, 200) // flytter teksten
     ctx.rotate(Math.PI / 3) // roterer teksten
-    ctx.fillText("Nu roterer det ...", 0, 0) // tekst og position
+    ctx.fillText("Roteret igå' ...", 0, 0) // tekst og position
     ctx.restore() // gendanner den tidligere tilstand
 }
-
-/**
- * OPGAVE (brainstorm)
- * Lav en init() funtion, der sætter en scene.
- * Tilføj transparente figurer i SVG.
- * Lav "sætstykker" i stil med en teaterkulisse:
- * 
- * - lav en scene i form af en canvas med id'en scene
- * - lav en baggrund i samme størrelse som scenen
- * - lav en forgrund
- * - lav en midtergrund
- * - lav en figur i forgrunden
- * - lav en mindre version af figuren i baggrunden
- * - placer en mørk træstup i forgrunden til højre
- * - forrest lav nogen blomster og græsstrå, et par sten etc.
- * - lav en funktion der placerer en sky
- * - lad et loop skabe ca. syv skyer
- *
- * OPgaver fortsat ...
- * 1. Lav en funktion, der tegner en kurve
- * 2. Lav et søjlediagram - med forklarende tekst. Data fra JSON eller array.
- *   - brug en funktion til at tegne søjlerne
- *   - brug samme funktion til at tegne teksten
- * 3. Lav et cirkeldiagram
-*/
-
 
 /**
  * WASD
  * Eller: flyt noget med tastetryk
  * (næste gang?)
  */
-
 let tux = () => {
 
     // begynd med at slette scenen
-    ctx.clearRect(0, 0, canvas.width, canvas.height) // slet lærredet
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+    // fordi: så kan du flytte rundt med tingene
 
     // byg scenen op igen
     // baggrund, mellemgrund, figur, forgrund ...
-    // kald funktioner som gør dette ...
+    // lad passende funktioner som gøre dette for dig ...
 
     // flyt en figur med tastetryk
     let figur = document.getElementById("figur")
@@ -251,10 +250,116 @@ let tux = () => {
 
         // opdaterer scenen
         ctx.clearRect(0, 0, canvas.width, canvas.height) // slet lærredet
-        // tegn baggrunden igenm etc. etc.
+        // tegn baggrunden igen etc. etc.
         ctx.drawImage(figur, figurX, figurY, figurWidth, figurHeight)
     }
 
     // tilføj eventlistener til canvaset
     document.addEventListener("keydown", tastetryk)
 }
+
+
+/** -------------------------------------------------
+ * BAGGRUND, FIGUR OG FORGRUND
+ * Eksempel.
+ */
+
+// baggrund
+let baggrund = () => {
+    //console.log("tegner baggrund")
+    gradientNy()
+    stjerneHimmel()
+}
+
+// forgrund
+let forgrund = () => {
+    console.log("tegner forgrund")
+    for (let i=0; i<5;i++){
+        let rndA = Math.floor(Math.random()*400)
+        let rndB = Math.floor(Math.random()*400)
+
+        ctx.beginPath() // begynder stien
+        ctx.arc(rndA, rndB, 50, 0, Math.PI * 2)
+        ctx.fillStyle = turkis // "blyanten er rød"
+        ctx.fill() // fylder cirklen med farve
+        ctx.stroke() // stregen sættes ind, der tegnes ...
+    }
+}
+
+// wasd figur
+let bgFigFg = () => {
+
+    // begynd med at slette scenen
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+    // fordi: så kan du flytte rundt med tingene
+
+    // byg scenen op igen
+    // baggrund, mellemgrund, figur, forgrund ...
+    // lad passende funktioner som gøre dette for dig ...
+
+    // flyt en figur med tastetryk
+    let figur = document.getElementById("figur")
+    let figurX = 0
+    let figurY = 0
+    let figurWidth = 100
+    let figurHeight = 100
+    let figurSpeed = 10
+    let figurDirection = 0 // 0 = ingen retning
+
+    // i computerspil får du måske brug for
+    let hitpoints = 200
+
+    // tilføj figuren til canvaset
+    ctx.drawImage(figur, figurX, figurY, figurWidth, figurHeight)
+    // tilføj eventlistener til canvaset
+
+    // WASD tasterne
+    let moveUp = 87 // W
+    let moveDown = 83 // S
+    let moveLeft = 65 // A
+    let moveRight = 68 // D
+
+    // tilføj eventlistener til canvaset
+    let tastetryk = (event) => {
+        switch(event.keyCode) {
+            case moveUp:
+                ctx.clearRect(0, 0, canvas.width, canvas.height) // slet lærredet
+                baggrund()
+                figurY -= figurSpeed
+                ctx.drawImage(figur, figurX, figurY, figurWidth, figurHeight)
+                forgrund()
+                break
+            case moveDown:
+                ctx.clearRect(0, 0, canvas.width, canvas.height) // slet lærredet
+                baggrund()
+                figurY += figurSpeed
+                ctx.drawImage(figur, figurX, figurY, figurWidth, figurHeight)
+                forgrund()
+                break
+            case moveLeft:
+                ctx.clearRect(0, 0, canvas.width, canvas.height) // slet lærredet
+                baggrund()
+                figurX -= figurSpeed
+                ctx.drawImage(figur, figurX, figurY, figurWidth, figurHeight)
+                forgrund()
+                break
+            case moveRight:
+                ctx.clearRect(0, 0, canvas.width, canvas.height) // slet lærredet
+                baggrund()
+                figurX += figurSpeed
+                ctx.drawImage(figur, figurX, figurY, figurWidth, figurHeight)
+                forgrund()
+                break
+            // PS: kan bruges med MaKeyMaKeys w.a.s.d. på bagsiden af kortet
+    }
+
+        // opdaterer scenen
+        //ctx.clearRect(0, 0, canvas.width, canvas.height) // slet lærredet
+        // tegn baggrunden igen etc. etc.
+        //ctx.drawImage(figur, figurX, figurY, figurWidth, figurHeight)
+    }
+
+    // tilføj eventlistener til canvaset
+    document.addEventListener("keydown", tastetryk)
+}
+
