@@ -1,17 +1,17 @@
 /**
- * Fil: HTML Canvas noter (2D grafik)
+ * Fil: HTML Canvas eksempler (2D grafik)
  * Formål: forberedelse af introduktion til canvas og js.
  * Version: 1.0
  */
 
-// Globale variabler
+// GLOBALE VARIABLER
 
-// lærredet
+// Scenen
 let canvas = document.querySelector("#scene") // selector
 let c = canvas.getContext("2d") // vi tegner i 2D a la Flanagan ;-)
 let ctx = c // og laver et alias der svarer til W3 eksempler ;-)
 
-// farver (CoPilot forsøger at vælge farver i stil med Goethes farvelære)
+// Farverne
 let tomat = "#FF6347" // Tomat (Tomato)
 let guld = "rgba(255, 99, 71, 0.4)" // Guld (Gold)
 let groenGul = "#ADFF2F" // Grøn gul (Green Yellow)
@@ -19,19 +19,6 @@ let turkis = "#00CED1" // Mørk turkis (Dark Turquoise)
 let blaa = "#8A2BE2" // Blå violet (Blue Violet)
 let moerk = "black" // mørk kontrast
 let lys = "white" // lys kontrast
-
-// tegn en firkant
-let tegnEnFirkant = () => {    
-    c.fillStyle = groenGul // farve fra globale var
-    c.strokeStyle 
-    c.fillRect(30,20,100,100) // definerer hjørnernes position
-}
-
-// Forbedring af koden: 
-// lav en funktion som, laver en firkant med en tilfældig bredde og højde.
-// Hvordan kan du skrive sådan en funktion?
-
-// Når det virker, så prøv at fyre funtionen af 32 gange med et loop!
 
 // du får ofte brug for at slette for at kunne tegne igen
 let sletLaerred = (navn) => {
@@ -42,6 +29,13 @@ let sletLaerred = (navn) => {
  * GEOMETRI
  * Stier og polygoner, Flanagan: 485.
  **/
+
+// REKTANGEL (og kvadrat)
+let tegnEnFirkant = () => {    
+    c.fillStyle = groenGul // farve fra globale var
+    c.strokeStyle 
+    c.fillRect(30,20,100,100) // definerer hjørnernes position
+}
 
 // STI - og lidt geometrisk sjov
 let a = Math.floor(Math.random()*100)
@@ -66,6 +60,7 @@ let enSti = () => {
     a += 25
     b += 33
 
+    // reset når værdien bliver for stor
     if (a > 500){
         Math.floor(Math.random()*200)
     }
@@ -119,20 +114,13 @@ let visSVG = () => {
     ctx.drawImage(svg, x,y, 100,100)
 }
 
-// Tegn nu 72 stjerner
+// Brug loops, når noget skal gentages
+// Vi tegner 72 stjerner
 let stjerneHimmel = () => {
     for (let i = 0; i < 72; i++){
         visSVG()
     }
 }
-
-/** Ideer til OPGAVER 
- * 1. Lav en funktion, der tegner en kurve
- * 2. Lav et søjlediagram - med forklarende tekst. Data fra JSON eller array.
- *   - brug en funktion til at tegne søjlerne
- *   - brug samme funktion til at tegne teksten
- * 3. Lav et cirkeldiagram
-*/
 
 // Tegn en CIRKEL på canvaset
 let tegnEnCirkel = () => {
@@ -171,8 +159,7 @@ let skrivTekst = () => {
 
 // Alternative skrifttyper  
 
-
-// rotere tekst
+// ROTER tekst (eller noget andet)
 let roterTekst = () => {
     ctx.save() // gemmer den nuværende tilstand
     ctx.translate(200, 200) // flytter teksten
@@ -198,52 +185,76 @@ let roterTekst = () => {
  * - lav en funktion der placerer en sky
  * - lad et loop skabe ca. syv skyer
  *
- */
+ * OPgaver fortsat ...
+ * 1. Lav en funktion, der tegner en kurve
+ * 2. Lav et søjlediagram - med forklarende tekst. Data fra JSON eller array.
+ *   - brug en funktion til at tegne søjlerne
+ *   - brug samme funktion til at tegne teksten
+ * 3. Lav et cirkeldiagram
+*/
+
 
 /**
- * FLYT EN FIGUR MED TASTETRYK
- * (Næste )
+ * WASD
+ * Eller: flyt noget med tastetryk
+ * (næste gang?)
  */
 
-// flyt en figur med tastetryk
-let figur = document.getElementById("figur")
-let figurX = 0
-let figurY = 0
-let figurWidth = 100
-let figurHeight = 100
-let figurSpeed = 10
-let figurDirection = 0 // 0 = ingen retning
+let tux = () => {
 
-// tilføj figuren til canvaset
-ctx.drawImage(figur, figurX, figurY, figurWidth, figurHeight)
-// tilføj eventlistener til canvaset
-
-// WASD tasterne
-let moveUp = 87 // W
-let moveDown = 83 // S
-let moveLeft = 65 // A
-let moveRight = 68 // D
-
-// tilføj eventlistener til canvaset
-let tastetryk = (event) => {
-    switch(event.keyCode) {
-        case moveUp:
-            figurY -= figurSpeed 
-            break
-        case moveDown:
-            figurY += figurSpeed
-            break
-        case moveLeft:
-            figurX -= figurSpeed
-            break
-        case moveRight:
-            figurX += figurSpeed
-            break
-    }
-    // opdaterer scen
+    // begynd med at slette scenen
     ctx.clearRect(0, 0, canvas.width, canvas.height) // slet lærredet
-    // tegn baggrunden igenm etc. etc.
+
+    // byg scenen op igen
+    // baggrund, mellemgrund, figur, forgrund ...
+    // kald funktioner som gør dette ...
+
+    // flyt en figur med tastetryk
+    let figur = document.getElementById("figur")
+    let figurX = 0
+    let figurY = 0
+    let figurWidth = 100
+    let figurHeight = 100
+    let figurSpeed = 10
+    let figurDirection = 0 // 0 = ingen retning
+
+    // i computerspil får du måske brug for
+    let hitpoints = 200
+
+    // tilføj figuren til canvaset
     ctx.drawImage(figur, figurX, figurY, figurWidth, figurHeight)
+    // tilføj eventlistener til canvaset
+
+    // WASD tasterne
+    let moveUp = 87 // W
+    let moveDown = 83 // S
+    let moveLeft = 65 // A
+    let moveRight = 68 // D
+
+    // tilføj eventlistener til canvaset
+    let tastetryk = (event) => {
+        switch(event.keyCode) {
+            case moveUp:
+                figurY -= figurSpeed 
+                break
+            case moveDown:
+                figurY += figurSpeed
+                break
+            case moveLeft:
+                figurX -= figurSpeed
+                break
+            case moveRight:
+                figurX += figurSpeed
+                break
+            // PS: kan bruges med MaKeyMaKeys w.a.s.d. på bagsiden af kortet
+    }
+
+        // opdaterer scenen
+        ctx.clearRect(0, 0, canvas.width, canvas.height) // slet lærredet
+        // tegn baggrunden igenm etc. etc.
+        ctx.drawImage(figur, figurX, figurY, figurWidth, figurHeight)
+    }
+
+    // tilføj eventlistener til canvaset
+    document.addEventListener("keydown", tastetryk)
 }
-// tilføj eventlistener til canvaset
-document.addEventListener("keydown", tastetryk)
