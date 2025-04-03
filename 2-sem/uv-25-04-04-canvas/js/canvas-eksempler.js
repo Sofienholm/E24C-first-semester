@@ -286,16 +286,12 @@ let forgrund = () => {
     }
 }
 
-// wasd figur
+// WASD - baggrund, figur, forgrund
 let bgFigFg = () => {
 
     // begynd med at slette scenen
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     // fordi: så kan du flytte rundt med tingene
-
-    // byg scenen op igen
-    // baggrund, mellemgrund, figur, forgrund ...
-    // lad passende funktioner som gøre dette for dig ...
 
     // flyt en figur med tastetryk
     let figur = document.getElementById("figur")
@@ -309,9 +305,11 @@ let bgFigFg = () => {
     // i computerspil får du måske brug for
     let hitpoints = 200
 
-    // tilføj figuren til canvaset
+    // SCENEN BYGGES =======================
+    baggrund() // baggrunden hentes
     ctx.drawImage(figur, figurX, figurY, figurWidth, figurHeight)
-    // tilføj eventlistener til canvaset
+    forgrund() // forgrunden indsættes
+   
 
     // WASD tasterne
     let moveUp = 87 // W
