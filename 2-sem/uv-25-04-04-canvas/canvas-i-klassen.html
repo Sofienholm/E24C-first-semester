@@ -9,6 +9,9 @@
         #scene {
             border: 3px solid blueviolet;
         }
+        #skjult {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -19,6 +22,13 @@
     <main>
         <canvas id="scene" width="600" height="400"></canvas>
 
+        <div id="skjult">
+            <img 
+                id="pingo" 
+                src="billeder/penguin-158551__180.webp" 
+                alt="pingo">
+        </div>
+
         <aside id="kontrolpanel">
 
             <!-- tegn noget -->
@@ -26,7 +36,7 @@
 
             <!-- viskelæder i funktion -->
             <button onclick="sletLaerred()">Slet alt</button>
-            
+
         </aside>
     </main>
 
@@ -73,11 +83,29 @@
         ctx.fill() // fylder cirklen med farve
         ctx.stroke() // stregen sættes ind, der tegnes ...
 
+
         let minFirkant = () => {
             // alert("virker det?")
-            ctx.font = "60px Arial";
-            ctx.strokeText("Hello World", 100, 200);
+            ctx.font = "60px Arial"
+            ctx.lineWidth = "2"
+            ctx.strokeStyle = tomat
+            ctx.fillStyle = moerk
+            ctx.strokeText("Mojn do!", 100, 200)
         }
+
+    let visPingo = () => {
+        let image = document.getElementById("pingo")
+        ctx.drawImage(image, 120,300, 100,100) // tegner et billede
+    }
+
+    let init = () => {
+        //alert("Hva' så?")
+        visPingo()
+    }
+    
+    init()
+
+        
 
     </script>
 </body>
