@@ -18,6 +18,10 @@
 
     <main>
         <canvas id="scene" width="600" height="400"></canvas>
+
+        <aside id="kontrolpanel">
+            <button onclick="minFirkant()">Firkant</button>
+        </aside>
     </main>
 
     <footer>
@@ -53,7 +57,21 @@
         ctx.fillStyle = turkis
         ctx.rect(0, 0, 123, 123) // kontur, x, y, strX, strY
         ctx.stroke()
-        ctx.fillRect(0,0,123,123) // fyldt firkant
+        ctx.fillRect(0,0,600,400) // fyldt firkant
+
+
+        // cirkel
+        ctx.beginPath() // begynder stien
+        ctx.arc(100, 100, 50, 0, Math.PI * 2)
+        ctx.fillStyle = turkis // "blyanten er rød"
+        ctx.fill() // fylder cirklen med farve
+        ctx.stroke() // stregen sættes ind, der tegnes ...
+
+        let minFirkant = () => {
+            // alert("virker det?")
+            ctx.font = "60px Arial";
+            ctx.strokeText("Hello World", 100, 200);
+        }
 
     </script>
 </body>
