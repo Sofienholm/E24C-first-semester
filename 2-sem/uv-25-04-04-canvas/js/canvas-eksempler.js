@@ -22,7 +22,7 @@ let blaa = "#8A2BE2" // Blå violet (Blue Violet)
 let moerk = "black" // mørk kontrast
 let lys = "white" // lys kontrast
 
-// du får ofte brug for at slette for at kunne tegne igen
+// Du får ofte brug for at slette lærredet
 let sletLaerred = (navn) => {
     c.clearRect(0, 0, canvas.width, canvas.height) // renser lærredet
 }
