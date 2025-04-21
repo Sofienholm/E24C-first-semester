@@ -1,0 +1,22 @@
+[
+ {
+   "name": "Jane",
+   "age": 72,
+   "eyecolor": "brown"
+ },
+ {
+   "name": ["Tarzan", "Lord Greystoke"],
+   "age": 43,
+   "eyecolor": "grey"
+ },
+ {
+   "name": "Lord Villain",
+   "age": 54,
+   "eyecolor": "brown"
+ },
+ {
+   "name": "Cleopatra",
+   "age": 44,
+   "eyecolor": "bluegrey"
+ }
+]
