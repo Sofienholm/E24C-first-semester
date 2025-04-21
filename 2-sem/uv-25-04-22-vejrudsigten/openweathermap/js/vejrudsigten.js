@@ -1,40 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>Weather: Here and now</title>
-
-    <style>
-        /* google font: Berkshire */
-        @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
-
-        body {
-            text-align: center;
-            font-family: sans serif;
-            font-size: large;
-            background: black;
-            color: lawngreen;
-            font-family: 'Berkshire Swash', cursive;
-        }
-
-        .weatherInfo {
-            border: 1px solid lawngreen;
-        }
-    </style>
-</head>
-
-<body>
-
-    <h1>Openweathermap Eksempel</h1>
-
-    <!-- herunder kan du se vejroplysningerne -->
-    <div id="result"></div>
-
-    <script>
         /*
             @datasæt læses sådan:
 
@@ -47,9 +10,7 @@
         */
 
 // token from OpenWeatherMap
-
-const appId = 'ADD-YOUR-TOKEN-HERE';
-
+const appId = '201d090c9cceacfc8931df89310ebfbb';
 
 // get the weather JSON data via query URI
 fetch("http://api.openweathermap.org/data/2.5/weather?q=Aarhus&lang=da&units=metric&appid=" + appId ).then(
@@ -61,11 +22,11 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Aarhus&lang=da&units=met
     console.log(data); // show what's in the json
 
     // solnedgang
-    var sunsetMs = data.sys.sunset * 1000; // dato-objektet har brug for millisek. Derfor * 1000
-    var sunset = new Date(sunsetMs);
+    // var sunsetMs = data.sys.sunset * 1000; // dato-objektet har brug for millisek. Derfor * 1000
+    // var sunset = new Date(sunsetMs);
 
     // Datoformattering @URI < https://www.w3schools.com/js/js_date_methods.asp >
-    var sunsetTime = sunset.getHours() + ":" + sunset.getMinutes();
+    // var sunsetTime = sunset.getHours() + ":" + sunset.getMinutes();
 
     // lægger vejrdata ind i #result
     document.getElementById('result').innerHTML =
@@ -73,11 +34,10 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Aarhus&lang=da&units=met
         // tilføjer ("append") en div til vejroplysninger
         '<div class="weatherInfo">' +
 
-
-
         // tilføjer bynavn
         '<h1> ' + data.name + ' </h1>' +
-        '<h2> Luftfugtighed: ' + data.main.humidity + ' </h2>' +
+        
+        // '<h2> Luftfugtighed: ' + data.main.humidity + ' </h2>' +
 
         // OPGAVE:
         // SKRIV HVOR VARMT DET ER LIGE NU?
@@ -87,22 +47,19 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Aarhus&lang=da&units=met
         '<aside id="temperatur" class="enClass"> Temperatur: ' + data.main.temp + ' </aside>' +
 
         // tilføjer en beskrivelse af vejret lige nu
-        '<h2>Vejr: ' + data.weather[0].description + '</h2>' +
+        // '<h2>Vejr: ' + data.weather[0].description + '</h2>' +
+        // '<h2>Pressure: ' + data.weather[0].main + '</h2>' +
 
-        '<h2>Pressure: ' + data.weather[0].main + '</h2>' +
-
-
-        // tilføjer vejrsymbol
+        // Vejrsymbol 
         '<figure>' +
         '<img src="http://openweathermap.org/img/wn/' + data.weather[0].icon +
         '.png" alt="Vejrsymbol">' +
         '</figure>' +
 
         // tilføjer klokkeslet for solens nedgang i vest
-        '<p> Solnedgang: ' + sunsetTime + '</p>' +
+        // '<p> Solnedgang: ' + sunsetTime + '</p>' +
 
-        // afslutter #weatherInfo taggen
-        '</div>'; //
+        '</div>'; // afslutter #weatherInfo taggen
 
     // URL to the weather icons: https://openweathermap.org/weather-conditions
 
@@ -110,7 +67,3 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Aarhus&lang=da&units=met
     // Do something with error here
     console.log('There was an error ...');
 });
-</script>
-
-</body>
-</html>
