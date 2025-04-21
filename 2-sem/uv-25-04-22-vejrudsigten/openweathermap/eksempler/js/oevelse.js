@@ -12,7 +12,7 @@ formål: sådan virker API'en fra OpenWeatherMap
 */
 
 // token fra OpenWeatherMap
-const appId = 'DIN-API-KEY-HER'
+const appId = 'DIN-APP-KEY-HER'
 
 // get the weather JSON data via query URI
 fetch("http://api.openweathermap.org/data/2.5/weather?q=Aarhus&lang=da&units=metric&appid=" + appId ).then(
